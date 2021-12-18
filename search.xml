@@ -23,10 +23,25 @@
   <entry>
     <title>hexo 博客显示插入图片</title>
     <url>/2021/12/16/hexo-%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<h4 id="1、安装图片插件"><a href="#1、安装图片插件" class="headerlink" title="1、安装图片插件"></a>1、安装图片插件</h4><p>在站点目录下 Git bash：npm install hexo-asset-image –save</p>
-<span id="more"></span>
-
-<h4 id="2、修改站点配置文件-blogs-config-yml"><a href="#2、修改站点配置文件-blogs-config-yml" class="headerlink" title="2、修改站点配置文件 blogs/_config.yml"></a>2、修改站点配置文件 blogs/_config.yml</h4><p>post_asset_folder: true</p>
+    <content><![CDATA[<h1 id="安装上传图片插件">安装上传图片插件</h1>
+<p>在站点目录下 Git bash：npm install hexo-asset-image --save</p>
+<h1 id="修改站点配置文件">修改站点配置文件</h1>
+<p>blog/_config.yml</p>
+<p>设置post_asset_folder: true</p>
+<h1 id="图片存储位置">图片存储位置</h1>
+<p>**hexo-asset-image插件查找图片的位置：_posts目录下与md文件同名的文件夹。（注意：md文件名中不要出现空格）**</p>
+<p>如本博客：</p>
+<p><img src="/2021/12/16/hexo-%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20211218141715365.png" alt="image-20211218141715365" style="zoom:80%;"></p>
+<h1 id="typora偏好设置">Typora偏好设置</h1>
+<p>使用如下规则，则插入（或粘贴）图片时Typora自动创建与md文件同名的文件夹，并将图片复制到文件夹内。</p>
+<p><img src="/2021/12/16/hexo-%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20211218144024580.png" alt="image-20211218144024580" style="zoom: 80%;"></p>
+<p>注意：如果勾选了自动转义url，图片路径里的中文会变成编码。不过对图片上传无影响。</p>
+<h1 id="插入图片的流程">插入图片的流程</h1>
+<ol type="1">
+<li><p>Typora内选择插入图像，选择图片位置；或者复制图片，粘贴到Typora编辑器。（<strong>注意</strong>：此时Typora已经创建了同名文件夹，并复制了图片。因此不需要再点Typora弹出的复制选项）</p></li>
+<li><p>修改图片名称等属性，但是不要改动链接。</p>
+<p>此外，Typora的复制图片的自动过程也可手动完成。</p></li>
+</ol>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -115,60 +130,6 @@
       </categories>
       <tags>
         <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo 博客添加搜索功能</title>
-    <url>/2021/12/16/hexo%20%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<h1 id="安装搜索插件">1、安装搜索插件</h1>
-<p>在站点目录下 Git bash：npm install hexo-generator-searchdb --save</p>
-<p>安装之后，会在站点目录的 public 文件夹下创建一个 search.xml 文件。（没有）</p>
-<p>站点目录(根目录)：</p>
-<p><img src="/2021/12/16/hexo%20%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/image-20210509204049864.png"></p>
-<p>可能出现警告：</p>
-<p><img src="/2021/12/16/hexo%20%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/image-20210509203213408.png" alt="hexowarn"></p>
-<p>Warning:</p>
-<blockquote>
-<p>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules):<br>
-npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})<br>
-npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules-generator-baidu-sitemap_modules):<br>
-npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})</p>
-</blockquote>
-<p>原因：fsevents是mac上的相关依赖。</p>
-<p>解决：可忽略。或者参考这篇博客操作：<a href="https://blog.csdn.net/m0_46256147/article/details/104725439">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules) -CSDN博客</a></p>
-<h1 id="修改站点配置文件-blogs_config.yml">2、修改站点配置文件 blogs/_config.yml</h1>
-<p>添加以下：</p>
-<p>search:<br>
-path: search.json # .xml<br>
-field: post<br>
-format: html<br>
-limit: 10000</p>
-<ul>
-<li>field：搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面</li>
-<li>limit：限制搜索的条目数</li>
-</ul>
-<p>网上很多教程都是 path: search.xml ，最后效果是这样的：</p>
-<p>效果并不理想...</p>
-<h1 id="修改主题配置文件-blogsthemesnext_config.yml">3、修改主题配置文件 blogs/themes/next/_config.yml</h1>
-<p>修改local_search为true：</p>
-<p>local_search:<br>
-enable: true<br>
-trigger: auto<br>
-top_n_per_article: 1</p>
-<ul>
-<li>top_n_per_article 字段表示在每篇文章中显示的搜索结果数量，设成 -1 会显示每篇文章的所有搜索结果数量。</li>
-</ul>
-<p>最后更新部署到github就可以了。</p>
-<p>最好先执行：hexo c (clean)</p>
-<p>部署命令：hexo g -d (generate, deploy)</p>
-<p>本地预览网页：hexo s (server)</p>
-<h1 id="效果">4、效果：</h1>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>博客美化</tag>
       </tags>
   </entry>
   <entry>
@@ -528,7 +489,7 @@ Z\quad
 \hline\end{array}
 \]</span></p>
 <p>​ 假设有三个寄存器目前的状态是这样：</p>
-<p><img src="/2021/12/16/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6/A51寄存器.png" alt="寄存器"></p>
+<p><img src="/2021/12/16/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6/A51%E5%AF%84%E5%AD%98%E5%99%A8.png" alt="三个寄存器"></p>
 <p>1、首先找到 <span class="math inline">\(x_8，y_10，z_10\)</span>。<br>
 2、取数量最多的值作为结果M。M=Maj(<span class="math inline">\(x_8,y_10,z_10\)</span>)= Maj(1,0,1)=1。（如果是Maj(0,0,1)=0）<br>
 3、对 <span class="math inline">\(x_8，y_10，z_10\)</span>中等于M的那个寄存器“左移”一位（注意图上都是反着放的），并在空出的最低位填入一位。规则如下：（不等于M则保持不变）<br>
@@ -629,6 +590,57 @@ y^2+axy+by=x^3+cx^2+dx+e
       </categories>
       <tags>
         <tag>计算机图形</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo 博客添加搜索功能（失败）</title>
+    <url>/2021/12/16/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<h1 id="安装搜索插件">1、安装搜索插件</h1>
+<p>在站点目录下 Git bash：npm install hexo-generator-searchdb --save</p>
+<p>安装之后，会在站点目录的 public 文件夹下创建一个 search.xml 文件。（没有）</p>
+<p>可能出现警告：</p>
+<p>Warning:</p>
+<blockquote>
+<p>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules):<br>
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})<br>
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules-generator-baidu-sitemap_modules):<br>
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})</p>
+</blockquote>
+<p>原因：fsevents是mac上的相关依赖。</p>
+<p>解决：可忽略。或者参考这篇博客操作：<a href="https://blog.csdn.net/m0_46256147/article/details/104725439">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules) -CSDN博客</a></p>
+<h1 id="修改站点配置文件-blogs_config.yml">2、修改站点配置文件 blogs/_config.yml</h1>
+<p>添加以下：</p>
+<p>search:<br>
+path: search.json # .xml<br>
+field: post<br>
+format: html<br>
+limit: 10000</p>
+<ul>
+<li>field：搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面</li>
+<li>limit：限制搜索的条目数</li>
+</ul>
+<p>网上很多教程都是 path: search.xml ，最后效果是这样的：</p>
+<p>效果并不理想...</p>
+<h1 id="修改主题配置文件-blogsthemesnext_config.yml">3、修改主题配置文件 blogs/themes/next/_config.yml</h1>
+<p>修改local_search为true：</p>
+<p>local_search:<br>
+enable: true<br>
+trigger: auto<br>
+top_n_per_article: 1</p>
+<ul>
+<li>top_n_per_article 字段表示在每篇文章中显示的搜索结果数量，设成 -1 会显示每篇文章的所有搜索结果数量。</li>
+</ul>
+<p>最后更新部署到github就可以了。</p>
+<p>最好先执行：hexo c (clean)</p>
+<p>部署命令：hexo g -d (generate, deploy)</p>
+<p>本地预览网页：hexo s (server)</p>
+<h1 id="效果">4、效果：</h1>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>博客美化</tag>
       </tags>
   </entry>
 </search>
