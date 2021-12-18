@@ -27,13 +27,13 @@
 <meta property="og:site_name" content="Lee&#39;s Blog">
 <meta property="og:description" content="基础数论、密码学">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://images2018.cnblogs.com/blog/1343872/201805/1343872-20180522212824710-864161932.png">
+<meta property="og:image" content="https://litevymoment.github.io/2021/12/16/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6/A51寄存器.png">
 <meta property="article:published_time" content="2021-12-16T02:59:35.354Z">
-<meta property="article:modified_time" content="2021-12-18T04:49:34.552Z">
+<meta property="article:modified_time" content="2021-12-18T05:45:46.486Z">
 <meta property="article:author" content="litevymoment">
 <meta property="article:tag" content="密码学">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://images2018.cnblogs.com/blog/1343872/201805/1343872-20180522212824710-864161932.png">
+<meta name="twitter:image" content="https://litevymoment.github.io/2021/12/16/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6/A51寄存器.png">
 
 <link rel="canonical" href="https://litevymoment.github.io/2021/12/16/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6/">
 
@@ -232,7 +232,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-18 12:49:34" itemprop="dateModified" datetime="2021-12-18T12:49:34+08:00">2021-12-18</time>
+                <time title="修改时间：2021-12-18 13:45:46" itemprop="dateModified" datetime="2021-12-18T13:45:46+08:00">2021-12-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -281,7 +281,7 @@
 <h1 id="行列式与矩阵">行列式与矩阵</h1>
 <h2 id="行列式的值">行列式的值</h2>
 <h3 id="二阶行列式">二阶行列式</h3>
-<p>：主对角线之积减去副对角线之积<br />
+<p>：主对角线之积减去副对角线之积<br>
 <span class="math display">\[
 D=
 \left|\begin{matrix}
@@ -301,10 +301,10 @@ a&amp;b&amp;c
 \]</span></p>
 <p>这个依然叫“对角线法则”，不过是复杂版的：主对角线乘完以后元素位置要平移一下继续相乘，直到x、y、z分别开过头以后，再分别减去x、y、z开头的副对角线乘积。</p>
 <h3 id="n阶行列式">n阶行列式</h3>
-<p>逆序数：一个排列中逆序对的总数，大数在小数前面就是一个逆序。<br />
-计算方法：从前往后看，每看一个数就看前面有比它大的有几个，然后加起来。<br />
+<p>逆序数：一个排列中逆序对的总数，大数在小数前面就是一个逆序。<br>
+计算方法：从前往后看，每看一个数就看前面有比它大的有几个，然后加起来。<br>
 <span class="math inline">\(t(32514)=5\)</span></p>
-<p>n阶行列式的值<br />
+<p>n阶行列式的值<br>
 <span class="math display">\[
 \left|\begin{matrix}
 a_{11}&amp;a_{12}&amp;...&amp;a_{1n}\\
@@ -326,7 +326,7 @@ a_{n1}&amp;a_{n2}&amp;...&amp;a_{nn}\\
 <h2 id="矩阵的行列式">矩阵的行列式</h2>
 <p>表示为 <span class="math inline">\(det(A)\ 或\ |A|\)</span></p>
 <h2 id="伴随矩阵">伴随矩阵</h2>
-<p>伴随矩阵<span class="math inline">\(A^*\)</span>：矩阵元素所对应的<strong>代数余子式</strong>构成的矩阵<strong>转置</strong>后得到的新矩阵。（转置：行列互换）<br />
+<p>伴随矩阵<span class="math inline">\(A^*\)</span>：矩阵元素所对应的<strong>代数余子式</strong>构成的矩阵<strong>转置</strong>后得到的新矩阵。（转置：行列互换）<br>
 <span class="math display">\[
 \left(\begin{matrix}
 a_{11}&amp;a_{12}&amp;a_{13}\\
@@ -345,7 +345,7 @@ A_{11}&amp;A_{21}&amp;A_{31}\\
 A_{12}&amp;A_{22}&amp;A_{32}\\
 A_{13}&amp;A_{23}&amp;A_{33}
 \end{matrix}\right)
-\]</span><br />
+\]</span><br>
 性质：<span class="math inline">\(AA^*=A^*A=|A|E\)</span> （E：单位矩阵，主对角线为1，其他全为0）</p>
 <h2 id="逆矩阵">逆矩阵</h2>
 <p><span class="math inline">\(逆矩阵A^{-1}:\quad AA^{-1}=A^{-1}A=E\)</span></p>
@@ -353,56 +353,56 @@ A_{13}&amp;A_{23}&amp;A_{33}
 <h1 id="整数数论">整数（数论）</h1>
 <p>所有运算、定义、定理只在整数集中。</p>
 <h2 id="模运算">模运算</h2>
-<p><strong>模运算 a mod p</strong><br />
-定义： a mod p等于a除以p的余数<br />
-性质：<br />
-<strong>同余式</strong>：a mod p = b mod p 记为 <strong>a≡b mod p</strong><br />
-对称性：a≡b mod p 等同于 b≡a mod p<br />
-传递性：a≡b mod p且b≡c mod p, 则a≡c mod p<br />
-<strong>运算规则</strong>：<br />
-(a + b) % p = (a % p + b % p) % p<br />
-(a - b) % p = (a % p - b % p) % p<br />
-(a * b) % p = (a % p * b % p) % p<br />
-(a^b) % p = ((a % p)^b) % p<br />
-<strong>重要定理</strong>：<br />
-　若a≡b (mod p)，则对于任意的c，都有(a + c) ≡ (b + c) (mod p)；<br />
-　若a≡b (mod p)，则对于任意的c，都有(a * c) ≡ (b * c) (mod p)；<br />
+<p><strong>模运算 a mod p</strong><br>
+定义： a mod p等于a除以p的余数<br>
+性质：<br>
+<strong>同余式</strong>：a mod p = b mod p 记为 <strong>a≡b mod p</strong><br>
+对称性：a≡b mod p 等同于 b≡a mod p<br>
+传递性：a≡b mod p且b≡c mod p, 则a≡c mod p<br>
+<strong>运算规则</strong>：<br>
+(a + b) % p = (a % p + b % p) % p<br>
+(a - b) % p = (a % p - b % p) % p<br>
+(a * b) % p = (a % p * b % p) % p<br>
+(a^b) % p = ((a % p)^b) % p<br>
+<strong>重要定理</strong>：<br>
+　若a≡b (mod p)，则对于任意的c，都有(a + c) ≡ (b + c) (mod p)；<br>
+　若a≡b (mod p)，则对于任意的c，都有(a * c) ≡ (b * c) (mod p)；<br>
 若a≡b (mod p)，那么a^n ≡ b^n (mod p)</p>
 <h2 id="数论基础">数论基础</h2>
 <h3 id="单位元">单位元</h3>
 <p>集合中的一个特殊元素，当它与其他元素结合时，会得到其他元素本身。又称幺元，通常用e表示。如乘法中的1，加法中的0。</p>
 <ul>
-<li>如何找单位元e：e#x = x#e = x<br />
-# | a b c d<br />
-a | a a a a 根据单位元的性质，d是它的单位元。<br />
-b | c b d b<br />
-c | d c b c 因为d是单位元，可以得到a,b,c没有逆元，d的逆元是它本身。<br />
+<li>如何找单位元e：e#x = x#e = x<br>
+# | a b c d<br>
+a | a a a a 根据单位元的性质，d是它的单位元。<br>
+b | c b d b<br>
+c | d c b c 因为d是单位元，可以得到a,b,c没有逆元，d的逆元是它本身。<br>
 d | a b c d</li>
 </ul>
 <h3 id="逆元">逆元</h3>
-<p>对一个存在<strong>单位元e</strong>的代数系统(S, #)，a的逆元b使得 <strong>b#a = a#b = e</strong>. （#：运算）如加法中逆元为-a｡<br />
+<p>对一个存在<strong>单位元e</strong>的代数系统(S, #)，a的逆元b使得 <strong>b#a = a#b = e</strong>. （#：运算）如加法中逆元为-a｡<br>
 a的逆元通常写作 <strong><span class="math inline">\(a^{-1}\)</span></strong> （注意不是a的-1次幂）</p>
-<p><strong>逆元存在的前提是有单位元</strong>，元素可能（通常不会）有多个逆元。单位元的逆元是它本身。<br />
+<p><strong>逆元存在的前提是有单位元</strong>，元素可能（通常不会）有多个逆元。单位元的逆元是它本身。<br>
 -如何理解逆元：https://www.jianshu.com/p/e9e1c52bf6c9</p>
 <h3 id="群-以及-z_nz_ngcd">群 以及 <span class="math inline">\(Z_n、Z^*_n、gcd\)</span></h3>
 <p>群表示一个满足封闭性、结合律，有单位元且每个元素都有逆元的二元运算的代数系。</p>
 <ul>
-<li><p><span class="math inline">\(Z_n 或Z\)</span>/&lt;n&gt;<strong>：表示集合{0 , … , n-1}。<br />
+<li><p><span class="math inline">\(Z_n 或Z\)</span>/&lt;n&gt;<strong>：表示集合{0 , … , n-1}。<br>
 在<span class="math inline">\(Z_n\)</span>中的运算被定义为</strong>模n约简**的运算。</p>
 <p>定义<span class="math inline">\(Z_n\)</span>上的整除为：<span class="math inline">\(a=c/b\ (mod\ p)或a=b^{-1}c\ (mod\ p)\)</span>，仅当<span class="math inline">\(c=ab\ (mod\ p)时\)</span>。</p></li>
-<li><p><span class="math inline">\(Z^*_n\)</span><strong>：表示在<span class="math inline">\(Z_n\)</span>中的乘法运算下</strong>有逆元<strong>的元素集合。同时也是</strong>小于n且与n互素**的正整数的集合。<br />
-它是有限群。如<span class="math inline">\(Z^*_5\)</span> = {1,2,3,4}。<br />
+<li><p><span class="math inline">\(Z^*_n\)</span><strong>：表示在<span class="math inline">\(Z_n\)</span>中的乘法运算下</strong>有逆元<strong>的元素集合。同时也是</strong>小于n且与n互素**的正整数的集合。<br>
+它是有限群。如<span class="math inline">\(Z^*_5\)</span> = {1,2,3,4}。<br>
 也就是说，mod p下的乘法运算中，元素有逆元的充要条件是它与p互素。</p></li>
 <li><p><strong>GCD( r ,s )</strong>表示整数r和s的最大公约数，是r和s可以同时被它整除的最大正整数。即r和s的共同因子的积。</p></li>
 <li><p><strong>LCM( r ,s )</strong>表示r和s的最小公倍数，是可同时被r和s整除的最小整数。</p></li>
 </ul>
-<p>素数：不可分解的正整数，大于1｡<br />
+<p>素数：不可分解的正整数，大于1｡<br>
 <strong>互素</strong>：若GCD( r ,s )=1，则r和s互素。即它们的共同因子只有1｡</p>
 <h3 id="欧拉函数φn">欧拉函数φ(n)</h3>
-<p>小于n且与n互素的正整数的个数。因此 $φ(n)=|Z^*_n| $<br />
-对于素数p,q：<br />
-<span class="math inline">\(φ(p) = p-1\)</span><br />
-<span class="math inline">\(φ(pq) = (p-1)(q-1)\)</span><br />
+<p>小于n且与n互素的正整数的个数。因此 $φ(n)=|Z^*_n| $<br>
+对于素数p,q：<br>
+<span class="math inline">\(φ(p) = p-1\)</span><br>
+<span class="math inline">\(φ(pq) = (p-1)(q-1)\)</span><br>
 <span class="math inline">\(φ(p^e) = (p-1)p^{e-1}\)</span></p>
 <h3 id="欧拉定理">欧拉定理</h3>
 <p>若β与n互素，<span class="math inline">\(即β∈Z^*_n，则有β^{φ(n)}=1(mod\ n)。\)</span></p>
@@ -411,31 +411,31 @@ a的逆元通常写作 <strong><span class="math inline">\(a^{-1}\)</span></stro
 <p>费马小定理是欧拉定理中p为素数时的特殊情况。</p>
 <h3 id="乘法取模逆元">乘法取模逆元</h3>
 <p>（模n乘法逆元）不难看出，模运算没有单位元。当我们讨论乘法逆元、模逆元时，通常我们讨论的是乘法取模运算的逆元。</p>
-<p>定义： ab (mod p)<br />
-单位元：1<br />
-a的逆元b： <span class="math inline">\(ab = 1\ (mod\ p)\)</span><br />
+<p>定义： ab (mod p)<br>
+单位元：1<br>
+a的逆元b： <span class="math inline">\(ab = 1\ (mod\ p)\)</span><br>
 可见，若a存在逆元，则1/a 是a的逆元。但1/a不是唯一的逆元（或者说不是正式的逆元）</p>
 <p><strong>在<span class="math inline">\(Z_n\)</span>上存在乘法逆元的充要条件：元素a与p互素</strong>，<span class="math inline">\(gcd(a,p)=1\)</span> （求逆元可用扩展欧几里得算法）</p>
-<p>x 0 1 2 3 4 5 6 7<br />
-k 0 1 2 3 4 (mod 5)<br />
-0 | 0 | 0 0 0 0 0 0 0 0<br />
-1 | 1 | 0 1 2 3 4 0 1 2<br />
-2 | 2 | 0 2 4 1 3 0 2 4<br />
-3 | 3 | 0 3 1 4 2 0 3 1<br />
+<p>x 0 1 2 3 4 5 6 7<br>
+k 0 1 2 3 4 (mod 5)<br>
+0 | 0 | 0 0 0 0 0 0 0 0<br>
+1 | 1 | 0 1 2 3 4 0 1 2<br>
+2 | 2 | 0 2 4 1 3 0 2 4<br>
+3 | 3 | 0 3 1 4 2 0 3 1<br>
 4 | 4 | 0 4 3 2 1 0 4 3</p>
-<p>在(mod p)的系统里，只有p个元素 {0, … ,p-1}。<br />
-这里(mod p)更像是一个限制条件而不是一个运算，元素a实际上是<strong>a (mod p)</strong>。用k=x mod 5 ，便可得到它的单位元为1。<br />
+<p>在(mod p)的系统里，只有p个元素 {0, … ,p-1}。<br>
+这里(mod p)更像是一个限制条件而不是一个运算，元素a实际上是<strong>a (mod p)</strong>。用k=x mod 5 ，便可得到它的单位元为1。<br>
 乘法取模运算中的每一个p都定义一个代数系统，但它们的单位元都等于1｡</p>
 <h3 id="方阵逆元">方阵逆元</h3>
-<p>设𝐴是定义在集合<span class="math inline">\(Z_p\)</span>上的𝑛阶方阵，若存在一个定义在<span class="math inline">\(Z_p\)</span>上的方阵𝐵，使得<br />
-<span class="math inline">\(𝐴∗𝐵=𝐵∗𝐴=𝐸\ (𝑚𝑜𝑑\ 𝑝)\)</span><br />
+<p>设𝐴是定义在集合<span class="math inline">\(Z_p\)</span>上的𝑛阶方阵，若存在一个定义在<span class="math inline">\(Z_p\)</span>上的方阵𝐵，使得<br>
+<span class="math inline">\(𝐴∗𝐵=𝐵∗𝐴=𝐸\ (𝑚𝑜𝑑\ 𝑝)\)</span><br>
 则称𝐴模𝑝可逆，𝐵为A的模𝑝逆矩阵，记为 <span class="math inline">\(𝐵=𝐴^{−1}(𝑚𝑜𝑑\ 𝑝)\)</span></p>
 <p><strong>在<span class="math inline">\(Z_p\)</span>上的𝑛阶方阵𝐴 模𝑝可逆的充要条件是：𝑝与𝑑𝑒𝑡(𝐴)互素</strong>。$ 𝑔𝑐𝑑(𝑝,𝑑𝑒𝑡(𝐴))=1$</p>
 <h2 id="欧几里得算法">欧几里得算法</h2>
-<p>辗转相除法：<br />
+<p>辗转相除法：<br>
 <span class="math inline">\(a=Qb+r\quad (a&gt;=b)\)</span> Q和r称为商和余数，r小于b。</p>
 <h3 id="欧几里得算法-1">欧几里得算法</h3>
-<p><span class="math inline">\(给定两个整数r和s，且s大于r，他们的最大公约数可以通过重复执行辗转相除法得到：\)</span><br />
+<p><span class="math inline">\(给定两个整数r和s，且s大于r，他们的最大公约数可以通过重复执行辗转相除法得到：\)</span><br>
 <span class="math display">\[
 s=Q_1r+r_1\\
 r=Q_2r_1+r_2\\
@@ -443,14 +443,14 @@ r_1=Q_3r_2+r_3\\
 ...\\
 r_{n-2}=Q_nr_{n-1}+r_n\\
 r_{n-1}=Q_{n+1}r_n
-\]</span><br />
-当余数为零时迭代终止，最后一个非零的余数<span class="math inline">\(r_n\)</span>就是<span class="math inline">\(gcd(r,s)\)</span><br />
+\]</span><br>
+当余数为零时迭代终止，最后一个非零的余数<span class="math inline">\(r_n\)</span>就是<span class="math inline">\(gcd(r,s)\)</span><br>
 （并且 <span class="math inline">\(r_n=gcd(r_{n-1},r_n)=gcd(r_{n-2},r_{n-1})=...=gcd(s,r)\)</span> ）</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python实现</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gcd</span>(<span class="params">a,b</span>):</span></span><br><span class="line">  <span class="keyword">if</span>(a&lt;b):</span><br><span class="line">     a,b=b,a</span><br><span class="line">  c=a%b</span><br><span class="line">  <span class="keyword">while</span> c:     <span class="comment"># 欧几里得算法</span></span><br><span class="line">     a,b=b,c</span><br><span class="line">     c=a%b</span><br><span class="line">  <span class="keyword">return</span> b </span><br></pre></td></tr></table></figure>
 <h3 id="扩展的欧几里得算法">扩展的欧几里得算法</h3>
 <p>贝祖定理：<span class="math inline">\(对于任意整数r和s，存在整数X和Y满足\quad Xr+Ys=gcd(r,s)\)</span></p>
 <p>换句话说，如果Xr+Ys=m有解，那么m一定是gcd(r,s)的若干倍。（可以用来判断一个这样的式子有没有解）</p>
-<p>如何求X和Y：<br />
+<p>如何求X和Y：<br>
 <span class="math display">\[
 观察欧几里得算法:\\
 s=Q_1r+r_1\\
@@ -459,44 +459,44 @@ r=Q_2r_1+r_2\\
 r_{n-2}=Q_nr_{n-1}+r_n\\
 r_{n-1}=Q_{n+1}r_n\\
 r_n
-\]</span><br />
-​ 当到达递归边界的时候，余数=0，<span class="math inline">\(r_n=gcd(r_{n-1},r_n)=gcd(s,r)\)</span> 。这时可以观察出来这个式子的一个解：<br />
-​ <span class="math inline">\(r_n*1+0=gcd \quad X=1,Y=0\)</span><br />
+\]</span><br>
+​ 当到达递归边界的时候，余数=0，<span class="math inline">\(r_n=gcd(r_{n-1},r_n)=gcd(s,r)\)</span> 。这时可以观察出来这个式子的一个解：<br>
+​ <span class="math inline">\(r_n*1+0=gcd \quad X=1,Y=0\)</span><br>
 将这个式子进行回代，从而得到最初的X，Y。</p>
-<p>​ 假设当前我们在求的是a和b的最大公约数，而我们已经求出了下一个状态：b和a%b的最大公因数，并且求出了一组X1和Y1使得 <span class="math inline">\(X1*b+Y1*(a\%b)=gcd\)</span><br />
+<p>​ 假设当前我们在求的是a和b的最大公约数，而我们已经求出了下一个状态：b和a%b的最大公因数，并且求出了一组X1和Y1使得 <span class="math inline">\(X1*b+Y1*(a\%b)=gcd\)</span><br>
 （在递归算法中，永远都是先得到下面一个状态的值）</p>
-<p>寻找这两个相邻状态的关系：<br />
+<p>寻找这两个相邻状态的关系：<br>
 首先我们知道 <span class="math inline">\(a\%b=a-(a//b)*b\)</span> ，带入得</p>
-<p>​ <span class="math inline">\(X1*b+Y1*(a-(a//b)*b)\)</span><br />
-<span class="math inline">\(= X1*b + Y1*a–Y1*(a//b)*b\)</span><br />
+<p>​ <span class="math inline">\(X1*b+Y1*(a-(a//b)*b)\)</span><br>
+<span class="math inline">\(= X1*b + Y1*a–Y1*(a//b)*b\)</span><br>
 <span class="math inline">\(= Y1*a + (X1–Y1*a//b)*b \ =gcd\)</span></p>
-<p>发现 $ X= Y1, Y = X1–Y1*a//b$<br />
+<p>发现 $ X= Y1, Y = X1–Y1*a//b$<br>
 这样我们就得到了每两个相邻状态的X和Y的转化，就可以在求gcd的同时对X和Y进行求值。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python实现</span></span><br><span class="line"><span class="comment"># 求gcd(a,b)的同时 求x,y使得 x*a+y*b=gcd(a,b)</span></span><br><span class="line"><span class="comment"># 当gcd(a,b)==1且a&lt;b时，x是a(mod b)的逆元，即x = a^-1 mod b</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">exgcd</span>(<span class="params">a,b</span>):</span></span><br><span class="line">    <span class="keyword">if</span> b==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>,<span class="number">0</span>,a</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        x,y,g = exgcd(b,a%b)</span><br><span class="line">        <span class="comment"># g = gcd(a,b) = gcd(b,a%b)</span></span><br><span class="line">        x,y=y, x-(a//b)*y</span><br><span class="line">        <span class="keyword">return</span> x,y,g</span><br></pre></td></tr></table></figure>
 <h4 id="求乘法逆元">求乘法逆元</h4>
 <p><span class="math inline">\(若整数r和s互素，那么存在整数X和Y满足：Xr+Ys=gcd(r,s)=1\)</span></p>
-<p>我们知道，在mod p下有逆元的元素等同于与p互素的元素。<br />
-假设我们求<span class="math inline">\(a\ (mod\ p)\)</span>的逆元，则有 <span class="math inline">\(gcd(a,p)=1\)</span>，根据上面的结论，存在整数X和Y使得<br />
-<span class="math inline">\(Xa+Yp=1\)</span><br />
-对上式mod p，得到 <span class="math inline">\(Xa=1\ (mod\ p)\)</span><br />
-根据定义，X是a (mod p)的逆元。<br />
+<p>我们知道，在mod p下有逆元的元素等同于与p互素的元素。<br>
+假设我们求<span class="math inline">\(a\ (mod\ p)\)</span>的逆元，则有 <span class="math inline">\(gcd(a,p)=1\)</span>，根据上面的结论，存在整数X和Y使得<br>
+<span class="math inline">\(Xa+Yp=1\)</span><br>
+对上式mod p，得到 <span class="math inline">\(Xa=1\ (mod\ p)\)</span><br>
+根据定义，X是a (mod p)的逆元。<br>
 所以，对<span class="math inline">\(a∈Z^*_p，p\)</span> 使用扩展欧几里得算法，得出的a的系数即为a (mod p)的逆元。</p>
 <h3 id="中国剩余定理">中国剩余定理</h3>
-<p>设正整数 <span class="math inline">\(m_1,m_2,...,m_k\)</span>两两互素，则同余方程组<br />
+<p>设正整数 <span class="math inline">\(m_1,m_2,...,m_k\)</span>两两互素，则同余方程组<br>
 <span class="math display">\[
 x≡a_1\ (mod\ m_1)\\
 x≡a_2\ (mod\ m_2)\\
 \cdots\\
 x≡a_k\ (mod\ m_k)
-\]</span><br />
-有整数解。并且在模<span class="math inline">\(M=m_1m_2\cdots m_k\)</span>下的解唯一，这个解为：<br />
+\]</span><br>
+有整数解。并且在模<span class="math inline">\(M=m_1m_2\cdots m_k\)</span>下的解唯一，这个解为：<br>
 <span class="math display">\[
 x≡(a_1M_1M^{-1}_1+a_2M_2M^{-1}_2+\cdots+a_kM_kM^{-1}_k)\ mod\ M
-\]</span><br />
+\]</span><br>
 其中<span class="math inline">\(M_i=M/m_i\)</span>，<span class="math inline">\(M^{-1}_i为M_i\ (mod\ m_i)\)</span>的逆元。</p>
 <h2 id="平方剩余">平方剩余</h2>
-<p><span class="math inline">\(p\)</span>为一个奇素数，若 <span class="math inline">\(y^2=x\ (mod\ p)\)</span>有解，则称 <span class="math inline">\(x\)</span>是<span class="math inline">\(Z\)</span>上模 <span class="math inline">\(p\)</span>的平方剩余。<br />
-否则称为非平方剩余。<br />
+<p><span class="math inline">\(p\)</span>为一个奇素数，若 <span class="math inline">\(y^2=x\ (mod\ p)\)</span>有解，则称 <span class="math inline">\(x\)</span>是<span class="math inline">\(Z\)</span>上模 <span class="math inline">\(p\)</span>的平方剩余。<br>
+否则称为非平方剩余。<br>
 模11的平方剩余为{1,3,4,5,9}.</p>
 <h3 id="欧拉准则">欧拉准则</h3>
 <p>元素 <span class="math inline">\(\beta\)</span>是模奇素数 <span class="math inline">\(p\)</span>的平方剩余，当且仅当 <span class="math inline">\(\beta^{(p-1)/2}=1\ (mod\ p)\)</span></p>
@@ -506,18 +506,18 @@ x≡(a_1M_1M^{-1}_1+a_2M_2M^{-1}_2+\cdots+a_kM_kM^{-1}_k)\ mod\ M
 <h3 id="移位密码">移位密码</h3>
 <p>字母表用1~26的整数来表示。加密函数 <span class="math inline">\(e_k(x_i)=x_i+k\ (mod\ 26)\)</span></p>
 <h3 id="仿射密码">仿射密码</h3>
-<p>加密函数 <span class="math inline">\(e_k(x_i)=ax_i+b\ (mod\ 26)\)</span><br />
+<p>加密函数 <span class="math inline">\(e_k(x_i)=ax_i+b\ (mod\ 26)\)</span><br>
 为了使该函数可逆，必须存在 <span class="math inline">\(a^{-1}(mod\ 26)\)</span>。</p>
 <h3 id="vigenere维吉尼亚密码">Vigenere(维吉尼亚)密码</h3>
 <p>将明文分为若干个长度为n的分组，分别加密。分组长度即为密钥长度。</p>
-<p>若密钥为"snow"，明文为"abcdef"：<br />
-'a b c d' 's n o w' 's o q z'<br />
-(0，1，2，3) + (18，13，14，22) = (18，14，16，25)<br />
-'e f' 's n' 'w s'<br />
-(4，5) + (18，13) = (22，18)<br />
+<p>若密钥为"snow"，明文为"abcdef"：<br>
+'a b c d' 's n o w' 's o q z'<br>
+(0，1，2，3) + (18，13，14，22) = (18，14，16，25)<br>
+'e f' 's n' 'w s'<br>
+(4，5) + (18，13) = (22，18)<br>
 得到密文'soqzws'。</p>
 <h3 id="hill希尔密码">Hill(希尔)密码</h3>
-<p>分组长度为2的Hill密码具有如下形式：<br />
+<p>分组长度为2的Hill密码具有如下形式：<br>
 <span class="math display">\[
 \left[\begin{matrix}
    y_1 \\
@@ -529,10 +529,10 @@ x≡(a_1M_1M^{-1}_1+a_2M_2M^{-1}_2+\cdots+a_kM_kM^{-1}_k)\ mod\ M
    x_2 
   \end{matrix}\right]
   \quad (mod\ p)
-\]</span><br />
-其中<span class="math inline">\(M\)</span>是模p的可逆方阵（满足$ 𝑔𝑐𝑑(𝑝,𝑑𝑒𝑡(M))=1$）。<br />
+\]</span><br>
+其中<span class="math inline">\(M\)</span>是模p的可逆方阵（满足$ 𝑔𝑐𝑑(𝑝,𝑑𝑒𝑡(M))=1$）。<br>
 对于字母表，p等于26。</p>
-<p>解密：求M的逆矩阵<br />
+<p>解密：求M的逆矩阵<br>
 <span class="math display">\[
 \left[\begin{matrix}
    x_1 \\
@@ -552,63 +552,63 @@ x≡(a_1M_1M^{-1}_1+a_2M_2M^{-1}_2+\cdots+a_kM_kM^{-1}_k)\ mod\ M
 <li>选择两个素数p和q。</li>
 <li>计算n=pq。</li>
 <li>计算φ(n)=(p-1)(q-1)。</li>
-<li>选择e，使得e与φ(n)互素且小于φ(n)。<br />
+<li>选择e，使得e与φ(n)互素且小于φ(n)。<br>
 <span class="math inline">\(e∈Z_{φ(n)}\ 且\ gcd(e,φ(n))=1\)</span></li>
-<li>计算d，使得 de=1 mod φ(n)，且d&lt;φ(n)。 这样即可得到公钥和私钥。<br />
+<li>计算d，使得 de=1 mod φ(n)，且d&lt;φ(n)。 这样即可得到公钥和私钥。<br>
 <span class="math inline">\(d为e\ (mod\ φ(n))的逆元\)</span>。</li>
 <li>加密，计算密文<span class="math inline">\(C=M^e\ mod\ n\)</span></li>
 <li>解密，计算明文<span class="math inline">\(M=C^d\ mod\ n\)</span></li>
 </ol>
 <h3 id="背包加密">背包加密</h3>
 <h4 id="背包问题">背包问题</h4>
-<p>假定一个背包可以承重 W，现在有 n 个物品，其重量分别为 <span class="math inline">\(a_1,a_2,...,a_n\)</span> 。我们想知道装哪些物品可以恰好使得背包装满，并且每个物品只能被装一次。这其实就是在解这样的一个问题<br />
-<span class="math inline">\(x_1a_1+x_2a_2+,...,+x_na_n=W\)</span><br />
-其中所有的 <span class="math inline">\(x_i\)</span> 只能为 0 和 1。<br />
-对于一般的整数集 <span class="math inline">\(\{a_1,a_2,...,a_n\}\)</span> ，我们必须枚举所有的 n 个整数的组合才能解决这个问题，复杂度为 <span class="math inline">\(2^n\)</span>。<br />
+<p>假定一个背包可以承重 W，现在有 n 个物品，其重量分别为 <span class="math inline">\(a_1,a_2,...,a_n\)</span> 。我们想知道装哪些物品可以恰好使得背包装满，并且每个物品只能被装一次。这其实就是在解这样的一个问题<br>
+<span class="math inline">\(x_1a_1+x_2a_2+,...,+x_na_n=W\)</span><br>
+其中所有的 <span class="math inline">\(x_i\)</span> 只能为 0 和 1。<br>
+对于一般的整数集 <span class="math inline">\(\{a_1,a_2,...,a_n\}\)</span> ，我们必须枚举所有的 n 个整数的组合才能解决这个问题，复杂度为 <span class="math inline">\(2^n\)</span>。<br>
 但是当<span class="math inline">\(a_i\)</span>是超递增的话，这个问题就很容易解决。</p>
-<p><strong>超递增整数集</strong>：<span class="math inline">\(\{a_1,a_2,...,a_n\}，a_i&gt;\sum^{i-1}_{k=1}a_k\)</span><br />
+<p><strong>超递增整数集</strong>：<span class="math inline">\(\{a_1,a_2,...,a_n\}，a_i&gt;\sum^{i-1}_{k=1}a_k\)</span><br>
 也就是每个数都大于它前面所有数之和。</p>
 <p>对于超递增整数集，如果加密后的结果大于 <span class="math inline">\(a_i\)</span> ，则 <span class="math inline">\(a_i\)</span>的系数必须为1。这样从大至小一步一步得到它的解。</p>
 <h4 id="背包加密-1">背包加密</h4>
-<p>公钥：(<span class="math inline">\(GK,n\)</span>)。 GK：一般背包。<br />
+<p>公钥：(<span class="math inline">\(GK,n\)</span>)。 GK：一般背包。<br>
 私钥：(<span class="math inline">\(SIK,m\)</span>)。<strong>SIK</strong>(Super Increasing Knapsack)：超递增背包序列（也即超递增整数集）。</p>
-<p><strong>将私钥转换为公钥</strong><br />
-1、生成SIK<br />
-2、选择 <span class="math inline">\(m,n\)</span> 满足：<span class="math inline">\(n\)</span> 大于SIK的元素之和，<span class="math inline">\(m\)</span>与<span class="math inline">\(n\)</span>互素且小于<span class="math inline">\(n\)</span>。（<span class="math inline">\(m∈Z^*_n\)</span>）<br />
+<p><strong>将私钥转换为公钥</strong><br>
+1、生成SIK<br>
+2、选择 <span class="math inline">\(m,n\)</span> 满足：<span class="math inline">\(n\)</span> 大于SIK的元素之和，<span class="math inline">\(m\)</span>与<span class="math inline">\(n\)</span>互素且小于<span class="math inline">\(n\)</span>。（<span class="math inline">\(m∈Z^*_n\)</span>）<br>
 3、GK的元素 <span class="math inline">\(g_i\)</span>等于SIK的元素 <span class="math inline">\(s_i\)</span>乘 <span class="math inline">\(m\)</span>模 <span class="math inline">\(n\)</span>。 <span class="math inline">\(g_i=s_im\ (mod\ n)\)</span></p>
-<p><strong>加密</strong><br />
-将明文用二进制数表示，并分成若干个长度为n的分组，n是背包序列的长度。每个分组与背包序列对应相乘后相加，得到一个整数密文。<br />
-M=83： 0 1 0 1 0 0 1 1<br />
-GK： (15,3,20,31) (15,3,20,31)<br />
+<p><strong>加密</strong><br>
+将明文用二进制数表示，并分成若干个长度为n的分组，n是背包序列的长度。每个分组与背包序列对应相乘后相加，得到一个整数密文。<br>
+M=83： 0 1 0 1 0 0 1 1<br>
+GK： (15,3,20,31) (15,3,20,31)<br>
 <span class="math inline">\(C_1C_2\)</span>={34,51}： (3+31) (20+31)</p>
-<p><strong>解密</strong><br />
-1、求 <span class="math inline">\(m^{-1}\ (mod\ n)\)</span><br />
-2、求 <span class="math inline">\(S=m^{-1}C\ (mod\ n)\)</span><br />
+<p><strong>解密</strong><br>
+1、求 <span class="math inline">\(m^{-1}\ (mod\ n)\)</span><br>
+2、求 <span class="math inline">\(S=m^{-1}C\ (mod\ n)\)</span><br>
 3、用SIK对<span class="math inline">\(S\)</span>解密，还原为二进制数。</p>
 <h2 id="diffie-hellman-密钥交换">Diffie-Hellman 密钥交换</h2>
-<p>已知两个公开的数：素数 <span class="math inline">\(p\)</span> 和p的<strong>本原根</strong><span class="math inline">\(P\)</span>。<br />
+<p>已知两个公开的数：素数 <span class="math inline">\(p\)</span> 和p的<strong>本原根</strong><span class="math inline">\(P\)</span>。<br>
 用户A、B希望交换密钥：</p>
-<p>A选择随机整数 <span class="math inline">\(a&lt;p\)</span>，并计算 <span class="math inline">\(P^a\ mod\ p\)</span><br />
-B选择随机整数 <span class="math inline">\(b&lt;p\)</span>，并计算 <span class="math inline">\(P^b\ mod\ p\)</span><br />
+<p>A选择随机整数 <span class="math inline">\(a&lt;p\)</span>，并计算 <span class="math inline">\(P^a\ mod\ p\)</span><br>
+B选择随机整数 <span class="math inline">\(b&lt;p\)</span>，并计算 <span class="math inline">\(P^b\ mod\ p\)</span><br>
 双方将<span class="math inline">\(a,b\)</span><strong>保密</strong>，向对方公开<span class="math inline">\(P^a,P^b\)</span>。</p>
-<p>用户A、B计算密钥K，产生相同的结果：<br />
-A：<span class="math inline">\(K=(P^b)^a\ mod\ p\)</span><br />
-B：<span class="math inline">\(K=(P^a)^b\ mod\ p\)</span><br />
+<p>用户A、B计算密钥K，产生相同的结果：<br>
+A：<span class="math inline">\(K=(P^b)^a\ mod\ p\)</span><br>
+B：<span class="math inline">\(K=(P^a)^b\ mod\ p\)</span><br>
 <span class="math inline">\(K=P^{ab}\ mod\ p\)</span></p>
 <p>这样，双方就完成了密钥交换。</p>
 <h2 id="分组密码">分组密码</h2>
 <h3 id="des">DES</h3>
 <h3 id="aes">AES</h3>
 <h2 id="流密码">流密码</h2>
-<p><strong>一次一密</strong>算法：<br />
-假设需要加密的信息（明文）有n比特长，随机选取一个长度为n比特的密钥，可以选择的密码有2^n个，然后将明文和密码”相加“，两者都是一个同长度的二进制数。“相加”是指在相同的位进行<strong>异或</strong>运算（相同得0,不同得1）。<br />
+<p><strong>一次一密</strong>算法：<br>
+假设需要加密的信息（明文）有n比特长，随机选取一个长度为n比特的密钥，可以选择的密码有2^n个，然后将明文和密码”相加“，两者都是一个同长度的二进制数。“相加”是指在相同的位进行<strong>异或</strong>运算（相同得0,不同得1）。<br>
 要对密文进行解密，只需要将密文和密钥“相加”。（异或运算的特性，使用同一个数对其他数异或两次得到其他数本身）</p>
 <p><strong>流密码</strong>就是使用较短的一串数字（密钥），来生成无限长的伪随机密码流，当然事实上只需要生成和明文长度一样的密码流就够了。流密码像水流一样源源不断的产生。为了能够解密，产生密码流的算法必须是确定的。</p>
 <h3 id="流密码的加密解密">流密码的加密解密</h3>
-<p>在生成密码流的过程中将当前生成的密钥与明文的下一位做异或运算得到对应的密文位。<br />
+<p>在生成密码流的过程中将当前生成的密钥与明文的下一位做异或运算得到对应的密文位。<br>
 解密过程与加密相同。</p>
 <h3 id="a51">A5/1</h3>
-<p>​ 有以下三个初始移位寄存器X、Y、Z，分别有19位，22位，23位。<br />
+<p>​ 有以下三个初始移位寄存器X、Y、Z，分别有19位，22位，23位。<br>
 <span class="math display">\[
 X\quad
 \begin{array}{|c|c|c|}
@@ -624,74 +624,74 @@ Z\quad
 \hline\end{array}
 \]</span></p>
 <p>​ 假设有三个寄存器目前的状态是这样：</p>
-<p><img src="https://images2018.cnblogs.com/blog/1343872/201805/1343872-20180522212824710-864161932.png" alt="img" /></p>
-<p>1、首先找到 <span class="math inline">\(x_8，y_10，z_10\)</span>。<br />
-2、取数量最多的值作为结果M。M=Maj(<span class="math inline">\(x_8,y_10,z_10\)</span>)= Maj(1,0,1)=1。（如果是Maj(0,0,1)=0）<br />
-3、对 <span class="math inline">\(x_8，y_10，z_10\)</span>中等于M的那个寄存器“左移”一位（注意图上都是反着放的），并在空出的最低位填入一位。规则如下：（不等于M则保持不变）<br />
-如果 <span class="math inline">\(x_8\)</span>=M，新的<span class="math inline">\(x_0=x_{13}⊕x_{16}⊕x_{17}⊕x_{18}\)</span>，然后X寄存器左移一位；<br />
-如果 <span class="math inline">\(y_10\)</span>=M，新的<span class="math inline">\(y_0=y_{20}⊕y_{21}\)</span>，然后Y寄存器左移一位；<br />
+<p><img src="/2021/12/16/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6/A51寄存器.png" alt="寄存器"></p>
+<p>1、首先找到 <span class="math inline">\(x_8，y_10，z_10\)</span>。<br>
+2、取数量最多的值作为结果M。M=Maj(<span class="math inline">\(x_8,y_10,z_10\)</span>)= Maj(1,0,1)=1。（如果是Maj(0,0,1)=0）<br>
+3、对 <span class="math inline">\(x_8，y_10，z_10\)</span>中等于M的那个寄存器“左移”一位（注意图上都是反着放的），并在空出的最低位填入一位。规则如下：（不等于M则保持不变）<br>
+如果 <span class="math inline">\(x_8\)</span>=M，新的<span class="math inline">\(x_0=x_{13}⊕x_{16}⊕x_{17}⊕x_{18}\)</span>，然后X寄存器左移一位；<br>
+如果 <span class="math inline">\(y_10\)</span>=M，新的<span class="math inline">\(y_0=y_{20}⊕y_{21}\)</span>，然后Y寄存器左移一位；<br>
 如果 <span class="math inline">\(z_10\)</span>=M，新的<span class="math inline">\(z_0=z_{7}⊕z_{20}⊕z_{21}⊕z_{22}\)</span>，然后Z寄存器左移一位；</p>
-<p>最后密钥 <span class="math inline">\(k_0=x_{18}⊕y_{21}⊕z_{22}\)</span>（三个最高位异或）<br />
+<p>最后密钥 <span class="math inline">\(k_0=x_{18}⊕y_{21}⊕z_{22}\)</span>（三个最高位异或）<br>
 如果需要64位密钥，对上述过程循环64次。</p>
 <h3 id="rc4">RC4</h3>
 <p>256字节的状态向量S= {0，1，…，255}，用比特字节表示为S= {00000000, 00000001, ….，11111111}。用一个可变长度为1~256字节（8-8048位）的密钥来初始化256字节的状态向量S={S[0], S[1], …, S[255]}，任何时候，S都包含0-255的8位无符号数的排列组合。加密和解密时，密码流中的每一个字节k由S产生，通过系统的方式随机从S的256个元素中选取一个。每产生一个字节k，S的元素都要被再次排列。</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012470144/article/details/81411565">对称加密之流密码RC4_Hsuyeungpeng的专栏-CSDN</a></p>
 </blockquote>
-<p>1、<strong>S和T的初始状态</strong><br />
+<p>1、<strong>S和T的初始状态</strong><br>
 S中元素的值按升序被置为0-255，同时建立一个临时向量T[256]，将密钥的值循环复制到T中。</p>
-<p>2、<strong>S的初始置换</strong><br />
-用T产生S的初始置换，置换伪码如下：<br />
-　　j = 0;<br />
-　　for (i = 0 ; i &lt; 256 ; i++){<br />
-　　　　j = ( j + S[i] + T[i] ) mod 256;<br />
-　　　　swap(S[i] , S[j]);<br />
-　　}<br />
+<p>2、<strong>S的初始置换</strong><br>
+用T产生S的初始置换，置换伪码如下：<br>
+　　j = 0;<br>
+　　for (i = 0 ; i &lt; 256 ; i++){<br>
+　　　　j = ( j + S[i] + T[i] ) mod 256;<br>
+　　　　swap(S[i] , S[j]);<br>
+　　}<br>
 因为对S的操作仅是交换，S仍然包含所有值为0-255的元素。</p>
-<p>3、<strong>密钥流的生成</strong><br />
-密钥流生成伪码如下：<br />
-　　i , j = 0;<br />
-　　while (true){<br />
-　　　　i = (i + 1) mod 256;<br />
-　　　　j = (j + S[i]) mod 256;<br />
-　　　　swap(S[i] , S[j]); //每产生一个k都重新排列S<br />
-　　　　t = (S[i] + S[j]) mod 256;<br />
-　　　　k = S[t]; //获取S中的一个随机元素作为密码流字节<br />
-output(k);<br />
+<p>3、<strong>密钥流的生成</strong><br>
+密钥流生成伪码如下：<br>
+　　i , j = 0;<br>
+　　while (true){<br>
+　　　　i = (i + 1) mod 256;<br>
+　　　　j = (j + S[i]) mod 256;<br>
+　　　　swap(S[i] , S[j]); //每产生一个k都重新排列S<br>
+　　　　t = (S[i] + S[j]) mod 256;<br>
+　　　　k = S[t]; //获取S中的一个随机元素作为密码流字节<br>
+output(k);<br>
 　　}</p>
 <h2 id="椭圆曲线密码">椭圆曲线密码</h2>
 <h3 id="椭圆曲线">椭圆曲线</h3>
-<p>椭圆曲线并非椭圆，它的曲线方程通常是以下形式的三次方程：<br />
+<p>椭圆曲线并非椭圆，它的曲线方程通常是以下形式的三次方程：<br>
 <span class="math display">\[
 y^2+axy+by=x^3+cx^2+dx+e
 \]</span></p>
 <h3 id="有限域上的椭圆曲线">有限域上的椭圆曲线</h3>
-<p>讨论曲线 <span class="math inline">\(y^2=x^3+ax+b\ (mod\ p)\)</span>，a,b为小于p的整数<br />
+<p>讨论曲线 <span class="math inline">\(y^2=x^3+ax+b\ (mod\ p)\)</span>，a,b为小于p的整数<br>
 当<span class="math inline">\(4a^3+27b^2(mod\ p)\)</span>不为零时构成有限域<span class="math inline">\(F_p\)</span>上的椭圆曲线群，记为<span class="math inline">\(E_p(a,b)\)</span>。</p>
 <h4 id="点的构造">点的构造</h4>
 <p>1、对于每一个x (0&lt;=x&lt;p)，计算<span class="math inline">\(z=x^3+ ax+b(mod\ p)\)</span></p>
-<p>2、若z不是模p的平方根，则在x上不存在<span class="math inline">\(E_p(a,b)\)</span>点；<br />
+<p>2、若z不是模p的平方根，则在x上不存在<span class="math inline">\(E_p(a,b)\)</span>点；<br>
 若z是模p的平方根，则存在满足条件的两个点。</p>
 <h4 id="点的加法">点的加法</h4>
 <p>定义：若P和Q都是椭圆曲线上的点，则P+Q也是曲线上的点。</p>
 <p><strong>单位元</strong>：无穷远∞点<span class="math inline">\(O\)</span>。对于所有曲线上的点P，P+∞=P.</p>
-<p><strong>逆元</strong>：记为-P，P+(-P)=<span class="math inline">\(O\)</span>。<br />
+<p><strong>逆元</strong>：记为-P，P+(-P)=<span class="math inline">\(O\)</span>。<br>
 对于<span class="math inline">\(y^2=x^3+ax+b\)</span>，若P=(x,y)，则<strong>-P=(x,-y)</strong>。</p>
 <p>将通过(x,y)和(x,-y)的直线看作<strong>垂线</strong>，它在单位元<span class="math inline">\(O\)</span>处与曲线第三次相交。即(x,y)+(x,-y)=<span class="math inline">\(O\)</span>。</p>
-<p>点的加法定义：若P、Q、R是曲线中位于同一条直线上的3个点，则<br />
-<span class="math inline">\(P+Q+R=O\)</span><br />
+<p>点的加法定义：若P、Q、R是曲线中位于同一条直线上的3个点，则<br>
+<span class="math inline">\(P+Q+R=O\)</span><br>
 这意味着<span class="math inline">\(P+Q=-R\)</span></p>
 <h4 id="求点pq">求点P+Q</h4>
 <p>已知 <span class="math inline">\(P=(x_p,y_p)，Q=(x_Q,y_Q)\)</span>，且<span class="math inline">\(P≠Q，Q≠-P\)</span></p>
-<p><span class="math inline">\(R=P+Q\)</span>：<br />
-<span class="math inline">\(λ=(y_p-y_Q)/(x_p-x_Q)\ (mod\ p)\)</span><br />
-<span class="math inline">\(x_R=λ^2-x_p-x_Q\ (mod\ p)\)</span><br />
+<p><span class="math inline">\(R=P+Q\)</span>：<br>
+<span class="math inline">\(λ=(y_p-y_Q)/(x_p-x_Q)\ (mod\ p)\)</span><br>
+<span class="math inline">\(x_R=λ^2-x_p-x_Q\ (mod\ p)\)</span><br>
 <span class="math inline">\(y_R=-y_p+λ(x_p-x_R)\ (mod\ p)\)</span></p>
 <h4 id="求点2p">求点2P</h4>
 <p>已知 <span class="math inline">\(P=(x_p,y_p)\)</span>，且<span class="math inline">\(y_p≠0\)</span></p>
-<p><span class="math inline">\(R=2P\)</span>：<br />
-<span class="math inline">\(λ=(3x^2_p+a)/(2y_p)\ (mod\ p)\)</span><br />
-<span class="math inline">\(x_R=λ^2-2x_p\ (mod\ p)\)</span><br />
+<p><span class="math inline">\(R=2P\)</span>：<br>
+<span class="math inline">\(λ=(3x^2_p+a)/(2y_p)\ (mod\ p)\)</span><br>
+<span class="math inline">\(x_R=λ^2-2x_p\ (mod\ p)\)</span><br>
 <span class="math inline">\(y_R=-y_p+λ(x_p-x_R)\ (mod\ p)\)</span></p>
 <h2 id="格密码">格密码</h2>
 
