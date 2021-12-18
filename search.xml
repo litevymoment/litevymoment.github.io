@@ -158,13 +158,7 @@
       </tags>
   </entry>
   <entry>
-    <title>test</title>
-    <url>/2021/05/09/test/</url>
-    <content><![CDATA[<p><img src="test/image-20210509204049864.png" alt="image-20210509204049864"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
+    <title>现代密码学</title>
     <url>/2021/12/16/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6/</url>
     <content><![CDATA[<h1 id="edge快捷查看markdown">Edge快捷查看markdown</h1>
 <p>1、在edge扩展商店中安装Markdown Viewer扩展。（或者使用其他浏览器安装扩展）</p>
@@ -591,6 +585,12 @@ y^2+axy+by=x^3+cx^2+dx+e
 <span class="math inline">\(y_R=-y_p+λ(x_p-x_R)\ (mod\ p)\)</span></p>
 <h2 id="格密码">格密码</h2>
 ]]></content>
+      <categories>
+        <category>课程总结</category>
+      </categories>
+      <tags>
+        <tag>密码学</tag>
+      </tags>
   </entry>
   <entry>
     <title>计算机如何存储图片</title>
