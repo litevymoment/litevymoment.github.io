@@ -29,7 +29,7 @@
 <p>blog/_config.yml</p>
 <p>设置post_asset_folder: true</p>
 <h1 id="图片存储位置">图片存储位置</h1>
-<p>**hexo-asset-image插件查找图片的位置：_posts目录下与md文件同名的文件夹。（注意：md文件名中不要出现空格）**</p>
+<p>hexo-asset-image插件查找图片的位置：**_posts目录下与md文件同名的文件夹<strong>。（注意：</strong>md文件名中不要出现空格**）</p>
 <p>如本博客：</p>
 <p><img src="/2021/12/16/hexo-%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20211218141715365.png" alt="image-20211218141715365" style="zoom:80%;"></p>
 <h1 id="typora偏好设置">Typora偏好设置</h1>
@@ -143,78 +143,6 @@
 <p>CONTENT 打开 "autoreload"，"mathjax"（重要），"scroll"，"toc"；</p>
 <p>进入 ADVANCED OPTIONS，点击 "ALLOW ALL"（重要）</p>
 <p>4、使用edge打开</p>
-<h1 id="行列式与矩阵">行列式与矩阵</h1>
-<h2 id="行列式的值">行列式的值</h2>
-<h3 id="二阶行列式">二阶行列式</h3>
-<p>：主对角线之积减去副对角线之积<br>
-<span class="math display">\[
-D=
-\left|\begin{matrix}
-a_{11}&amp;a_{12}\\
-a_{21}&amp;a_{22}
-\end{matrix}\right|
-=a_{11}a_{22}-a_{12}a_{21}
-\]</span></p>
-<h3 id="三阶行列式">三阶行列式</h3>
-<p><span class="math display">\[
-\left|\begin{matrix}
-x&amp;y&amp;z\\
-r&amp;s&amp;t\\
-a&amp;b&amp;c
-\end{matrix}\right|
-=xsc+yta+zrb-(zsa+yrc+xtb)
-\]</span></p>
-<p>这个依然叫“对角线法则”，不过是复杂版的：主对角线乘完以后元素位置要平移一下继续相乘，直到x、y、z分别开过头以后，再分别减去x、y、z开头的副对角线乘积。</p>
-<h3 id="n阶行列式">n阶行列式</h3>
-<p>逆序数：一个排列中逆序对的总数，大数在小数前面就是一个逆序。<br>
-计算方法：从前往后看，每看一个数就看前面有比它大的有几个，然后加起来。<br>
-<span class="math inline">\(t(32514)=5\)</span></p>
-<p>n阶行列式的值<br>
-<span class="math display">\[
-\left|\begin{matrix}
-a_{11}&amp;a_{12}&amp;...&amp;a_{1n}\\
-a_{21}&amp;a_{22}&amp;...&amp;a_{2n}\\
-\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
-a_{n1}&amp;a_{n2}&amp;...&amp;a_{nn}\\
-\end{matrix}\right|
-=\sum\ (-1)^{t(p_1p_2...p_n)}a_{1p_1}a_{2p_2}\cdots a_{np_n}
-\]</span></p>
-<ol type="1">
-<li>n阶行列式一共有<strong>n!</strong>项（因为是a的第二个下标的全排列）。</li>
-<li>每一项都是不同行不同列的n个元素的积。</li>
-<li>当第二下标的排列是奇排列符号为负，否则为正。</li>
-</ol>
-<h2 id="代数余子式">代数余子式</h2>
-<p>余子式：将行列式的元素<span class="math inline">\(a_{ij}\)</span>所在的行、列删去得到(n-1)阶的行列式：<span class="math inline">\(M_{ij}\)</span></p>
-<p>代数余子式：<span class="math inline">\(A_{ij}=(-1)^{i+j}M_{ij}\)</span></p>
-<p>行列式等于其任意某一行（或某列）的各元素与其对应代数余子式乘积之和。</p>
-<h2 id="矩阵的行列式">矩阵的行列式</h2>
-<p>表示为 <span class="math inline">\(det(A)\ 或\ |A|\)</span></p>
-<h2 id="伴随矩阵">伴随矩阵</h2>
-<p>伴随矩阵<span class="math inline">\(A^*\)</span>：矩阵元素所对应的<strong>代数余子式</strong>构成的矩阵<strong>转置</strong>后得到的新矩阵。（转置：行列互换）<br>
-<span class="math display">\[
-\left(\begin{matrix}
-a_{11}&amp;a_{12}&amp;a_{13}\\
-a_{21}&amp;a_{22}&amp;a_{23}\\
-a_{31}&amp;a_{32}&amp;a_{33}
-\end{matrix}\right)
-→
-\left(\begin{matrix}
-A_{11}&amp;A_{12}&amp;A_{13}\\
-A_{21}&amp;A_{22}&amp;A_{23}\\
-A_{31}&amp;A_{32}&amp;A_{33}
-\end{matrix}\right)
-→
-\left(\begin{matrix}
-A_{11}&amp;A_{21}&amp;A_{31}\\
-A_{12}&amp;A_{22}&amp;A_{32}\\
-A_{13}&amp;A_{23}&amp;A_{33}
-\end{matrix}\right)
-\]</span><br>
-性质：<span class="math inline">\(AA^*=A^*A=|A|E\)</span> （E：单位矩阵，主对角线为1，其他全为0）</p>
-<h2 id="逆矩阵">逆矩阵</h2>
-<p><span class="math inline">\(逆矩阵A^{-1}:\quad AA^{-1}=A^{-1}A=E\)</span></p>
-<p><span class="math inline">\(A^{-1}=\frac{1}{|A|}A^*\)</span></p>
 <h1 id="整数数论">整数（数论）</h1>
 <p>所有运算、定义、定理只在整数集中。</p>
 <h2 id="模运算">模运算</h2>
@@ -252,14 +180,14 @@ a的逆元通常写作 <strong><span class="math inline">\(a^{-1}\)</span></stro
 <h3 id="群-以及-z_nz_ngcd">群 以及 <span class="math inline">\(Z_n、Z^*_n、gcd\)</span></h3>
 <p>群表示一个满足封闭性、结合律，有单位元且每个元素都有逆元的二元运算的代数系。</p>
 <ul>
-<li><p><span class="math inline">\(Z_n 或Z\)</span>/&lt;n&gt;<strong>：表示集合{0 , … , n-1}。<br>
-在<span class="math inline">\(Z_n\)</span>中的运算被定义为</strong>模n约简**的运算。</p>
+<li><p><mark><span class="math inline">\(Z_n 或Z\)</span>/&lt;n&gt;</mark>：表示集合{0 , … , n-1}。<br>
+在<span class="math inline">\(Z_n\)</span>中的运算被定义为<strong>模n约简</strong>的运算。</p>
 <p>定义<span class="math inline">\(Z_n\)</span>上的整除为：<span class="math inline">\(a=c/b\ (mod\ p)或a=b^{-1}c\ (mod\ p)\)</span>，仅当<span class="math inline">\(c=ab\ (mod\ p)时\)</span>。</p></li>
-<li><p><span class="math inline">\(Z^*_n\)</span><strong>：表示在<span class="math inline">\(Z_n\)</span>中的乘法运算下</strong>有逆元<strong>的元素集合。同时也是</strong>小于n且与n互素**的正整数的集合。<br>
+<li><p><mark><span class="math inline">\(Z^*_n\)</span></mark>：表示在<span class="math inline">\(Z_n\)</span>中的乘法运算下<strong>有逆元</strong>的元素集合。同时也是<strong>小于n且与n互素</strong>的正整数的集合。<br>
 它是有限群。如<span class="math inline">\(Z^*_5\)</span> = {1,2,3,4}。<br>
 也就是说，mod p下的乘法运算中，元素有逆元的充要条件是它与p互素。</p></li>
-<li><p><strong>GCD( r ,s )</strong>表示整数r和s的最大公约数，是r和s可以同时被它整除的最大正整数。即r和s的共同因子的积。</p></li>
-<li><p><strong>LCM( r ,s )</strong>表示r和s的最小公倍数，是可同时被r和s整除的最小整数。</p></li>
+<li><p><strong>GCD( r ,s )</strong>表示整数r和s的<strong>最大公约数</strong>，是r和s可以同时被它整除的最大正整数。即r和s的共同因子的积。</p></li>
+<li><p><strong>LCM( r ,s )</strong>表示r和s的<strong>最小公倍数</strong>，是可同时被r和s整除的最小整数。</p></li>
 </ul>
 <p>素数：不可分解的正整数，大于1｡<br>
 <strong>互素</strong>：若GCD( r ,s )=1，则r和s互素。即它们的共同因子只有1｡</p>
@@ -270,10 +198,16 @@ a的逆元通常写作 <strong><span class="math inline">\(a^{-1}\)</span></stro
 <span class="math inline">\(φ(pq) = (p-1)(q-1)\)</span><br>
 <span class="math inline">\(φ(p^e) = (p-1)p^{e-1}\)</span></p>
 <h3 id="欧拉定理">欧拉定理</h3>
-<p>若β与n互素，<span class="math inline">\(即β∈Z^*_n，则有β^{φ(n)}=1(mod\ n)。\)</span></p>
+<p>若β与n互素，即<span class="math inline">\(β∈Z^*_n\)</span>，则有<mark><span class="math inline">\(β^{φ(n)}=1(mod\ n)\)</span></mark>。</p>
 <h3 id="费马小定理">费马小定理</h3>
-<p><span class="math inline">\(若p为素数且β∈Z_p，则β^p=β(mod\ p)。\)</span></p>
-<p>费马小定理是欧拉定理中p为素数时的特殊情况。</p>
+<p><span class="math inline">\(若p为素数且β∈Z_p，则β^p=β(mod\ p)。\quad\quad\)</span>或 <span class="math inline">\(β^{p-1}=1(mod\ p)\)</span></p>
+<p>费马小定理是欧拉定理中n为素数时的特殊情况。</p>
+<h3 id="阶">阶</h3>
+<p>定义：设a和n是互素的整数，使得 <span class="math inline">\(a^m≡1(mod\ n)\)</span>成立的<strong>最小</strong>正整数m，称为a模n的阶。</p>
+<p>根据欧拉定理，<span class="math inline">\(φ(n)\)</span>恒满足上面的等式，但<span class="math inline">\(φ(n)\)</span>不一定是最小的那个数，因此它不一定是阶。</p>
+<h3 id="本原根">本原根</h3>
+<p>定义：如果 <span class="math inline">\(a模n的阶m=φ(n)\)</span>，则称<span class="math inline">\(a\)</span>是<span class="math inline">\(n\)</span>的本原根。</p>
+<p>也就是说<span class="math inline">\(φ(n)\)</span>刚好是满足条件的最小的正整数。</p>
 <h3 id="乘法取模逆元">乘法取模逆元</h3>
 <p>（模n乘法逆元）不难看出，模运算没有单位元。当我们讨论乘法逆元、模逆元时，通常我们讨论的是乘法取模运算的逆元。</p>
 <p>定义： ab (mod p)<br>
@@ -309,11 +243,11 @@ r_1=Q_3r_2+r_3\\
 r_{n-2}=Q_nr_{n-1}+r_n\\
 r_{n-1}=Q_{n+1}r_n
 \]</span><br>
-当余数为零时迭代终止，最后一个非零的余数<span class="math inline">\(r_n\)</span>就是<span class="math inline">\(gcd(r,s)\)</span><br>
+当<strong>余数为零时</strong>迭代终止，<mark>最后一个非零的余数<span class="math inline">\(r_n\)</span>就是<span class="math inline">\(gcd(r,s)\)</span></mark>。<br>
 （并且 <span class="math inline">\(r_n=gcd(r_{n-1},r_n)=gcd(r_{n-2},r_{n-1})=...=gcd(s,r)\)</span> ）</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python实现</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gcd</span>(<span class="params">a,b</span>):</span></span><br><span class="line">  <span class="keyword">if</span>(a&lt;b):</span><br><span class="line">     a,b=b,a</span><br><span class="line">  c=a%b</span><br><span class="line">  <span class="keyword">while</span> c:     <span class="comment"># 欧几里得算法</span></span><br><span class="line">     a,b=b,c</span><br><span class="line">     c=a%b</span><br><span class="line">  <span class="keyword">return</span> b </span><br></pre></td></tr></table></figure>
 <h3 id="扩展的欧几里得算法">扩展的欧几里得算法</h3>
-<p>贝祖定理：<span class="math inline">\(对于任意整数r和s，存在整数X和Y满足\quad Xr+Ys=gcd(r,s)\)</span></p>
+<p>贝祖定理：<span class="math inline">\(对于任意整数r和s，存在整数X和Y满足:\; Xr+Ys=gcd(r,s)\)</span></p>
 <p>换句话说，如果Xr+Ys=m有解，那么m一定是gcd(r,s)的若干倍。（可以用来判断一个这样的式子有没有解）</p>
 <p>如何求X和Y：<br>
 <span class="math display">\[
@@ -332,12 +266,12 @@ r_n
 （在递归算法中，永远都是先得到下面一个状态的值）</p>
 <p>寻找这两个相邻状态的关系：<br>
 首先我们知道 <span class="math inline">\(a\%b=a-(a//b)*b\)</span> ，带入得</p>
-<p>​ <span class="math inline">\(X1*b+Y1*(a-(a//b)*b)\)</span><br>
+<p><span class="math inline">\(\quad X1*b+Y1*(a-(a//b)*b)\)</span><br>
 <span class="math inline">\(= X1*b + Y1*a–Y1*(a//b)*b\)</span><br>
 <span class="math inline">\(= Y1*a + (X1–Y1*a//b)*b \ =gcd\)</span></p>
 <p>发现 $ X= Y1, Y = X1–Y1*a//b$<br>
 这样我们就得到了每两个相邻状态的X和Y的转化，就可以在求gcd的同时对X和Y进行求值。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python实现</span></span><br><span class="line"><span class="comment"># 求gcd(a,b)的同时 求x,y使得 x*a+y*b=gcd(a,b)</span></span><br><span class="line"><span class="comment"># 当gcd(a,b)==1且a&lt;b时，x是a(mod b)的逆元，即x = a^-1 mod b</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">exgcd</span>(<span class="params">a,b</span>):</span></span><br><span class="line">    <span class="keyword">if</span> b==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>,<span class="number">0</span>,a</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        x,y,g = exgcd(b,a%b)</span><br><span class="line">        <span class="comment"># g = gcd(a,b) = gcd(b,a%b)</span></span><br><span class="line">        x,y=y, x-(a//b)*y</span><br><span class="line">        <span class="keyword">return</span> x,y,g</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python实现</span></span><br><span class="line"><span class="comment"># 求gcd(a,b)的同时 求x,y使得 x*a+y*b=gcd(a,b)</span></span><br><span class="line"><span class="comment"># 当gcd(a,b)==1且a&lt;b时，x是a(mod b)的逆元，即x = a^-1 mod b</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">exgcd</span>(<span class="params">a,b</span>):</span></span><br><span class="line">    <span class="keyword">if</span> b==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>,<span class="number">0</span>,a</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        x,y,g = exgcd(b,a%b)</span><br><span class="line">        <span class="comment"># g = gcd(a,b) = gcd(b,a%b)</span></span><br><span class="line">        x,y=y, x-(a//b)*y</span><br><span class="line">        <span class="keyword">return</span> x,y,g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 手算推荐以下方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">exgcd</span>(<span class="params">a,b</span>):</span>        <span class="comment"># 扩展欧几里得（非递归）</span></span><br><span class="line">    <span class="keyword">if</span> a&gt;b:</span><br><span class="line">        a,b=b,a</span><br><span class="line">    x = [<span class="number">1</span>,<span class="number">0</span>,a]</span><br><span class="line">    y = [<span class="number">0</span>,<span class="number">1</span>,b]</span><br><span class="line">    <span class="keyword">while</span> x[<span class="number">2</span>]&gt;<span class="number">0</span>:</span><br><span class="line">        q = y[<span class="number">2</span>]//x[<span class="number">2</span>]</span><br><span class="line">        temp = [y[i]-q*x[i] <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>)]</span><br><span class="line">        y = x</span><br><span class="line">        x = temp</span><br><span class="line">    <span class="keyword">return</span> y[<span class="number">0</span>],y[<span class="number">1</span>],y[<span class="number">2</span>]	<span class="comment"># x,y,gcd</span></span><br></pre></td></tr></table></figure>
 <h4 id="求乘法逆元">求乘法逆元</h4>
 <p><span class="math inline">\(若整数r和s互素，那么存在整数X和Y满足：Xr+Ys=gcd(r,s)=1\)</span></p>
 <p>我们知道，在mod p下有逆元的元素等同于与p互素的元素。<br>
@@ -358,9 +292,9 @@ x≡a_k\ (mod\ m_k)
 <span class="math display">\[
 x≡(a_1M_1M^{-1}_1+a_2M_2M^{-1}_2+\cdots+a_kM_kM^{-1}_k)\ mod\ M
 \]</span><br>
-其中<span class="math inline">\(M_i=M/m_i\)</span>，<span class="math inline">\(M^{-1}_i为M_i\ (mod\ m_i)\)</span>的逆元。</p>
+其中<mark><span class="math inline">\(M_i=M/m_i\)</span></mark>，<mark><span class="math inline">\(M^{-1}_i为M_i\ (mod\ m_i)\)</span>的逆元</mark>。</p>
 <h2 id="平方剩余">平方剩余</h2>
-<p><span class="math inline">\(p\)</span>为一个奇素数，若 <span class="math inline">\(y^2=x\ (mod\ p)\)</span>有解，则称 <span class="math inline">\(x\)</span>是<span class="math inline">\(Z\)</span>上模 <span class="math inline">\(p\)</span>的平方剩余。<br>
+<p><span class="math inline">\(p\)</span>为一个<strong>奇素数</strong>，若 <span class="math inline">\(y^2=x\ (mod\ p)\)</span>有解，则称 <span class="math inline">\(x\)</span>是<span class="math inline">\(Z\)</span>上模 <span class="math inline">\(p\)</span>的平方剩余。<br>
 否则称为非平方剩余。<br>
 模11的平方剩余为{1,3,4,5,9}.</p>
 <h3 id="欧拉准则">欧拉准则</h3>
@@ -411,6 +345,14 @@ x≡(a_1M_1M^{-1}_1+a_2M_2M^{-1}_2+\cdots+a_kM_kM^{-1}_k)\ mod\ M
   \quad (mod\ p)
 \]</span></p>
 <h3 id="栅栏密码">栅栏密码</h3>
+<p>将明文分成n行摆放，然后从上至下，从左至右地读出密文。<br>
+如"abcdefghij"分三行：<br>
+<span class="math display">\[
+a\ b\ c\ d\\
+e\ f\ g\ h\\
+\ i\ j\qquad
+\]</span><br>
+则密文为：aeibfjcgdh</p>
 <h2 id="非对称密码">非对称密码</h2>
 <h3 id="rsa加密">RSA加密</h3>
 <ol type="1">
@@ -418,11 +360,11 @@ x≡(a_1M_1M^{-1}_1+a_2M_2M^{-1}_2+\cdots+a_kM_kM^{-1}_k)\ mod\ M
 <li>计算n=pq。</li>
 <li>计算φ(n)=(p-1)(q-1)。</li>
 <li>选择e，使得e与φ(n)互素且小于φ(n)。<br>
-<span class="math inline">\(e∈Z_{φ(n)}\ 且\ gcd(e,φ(n))=1\)</span></li>
-<li>计算d，使得 de=1 mod φ(n)，且d&lt;φ(n)。 这样即可得到公钥和私钥。<br>
+<span class="math inline">\(e∈Z^*_{φ(n)}\)</span></li>
+<li>计算d，使得 de=1 mod φ(n)，且d&lt;φ(n)。<br>
 <span class="math inline">\(d为e\ (mod\ φ(n))的逆元\)</span>。</li>
-<li>加密，计算密文<span class="math inline">\(C=M^e\ mod\ n\)</span></li>
-<li>解密，计算明文<span class="math inline">\(M=C^d\ mod\ n\)</span></li>
+<li>公钥(n,e)加密，计算密文<span class="math inline">\(C=M^e\ mod\ n\)</span></li>
+<li>私钥(n,d)解密，计算明文<span class="math inline">\(M=C^d\ mod\ n\)</span></li>
 </ol>
 <h3 id="背包加密">背包加密</h3>
 <h4 id="背包问题">背包问题</h4>
@@ -433,7 +375,7 @@ x≡(a_1M_1M^{-1}_1+a_2M_2M^{-1}_2+\cdots+a_kM_kM^{-1}_k)\ mod\ M
 但是当<span class="math inline">\(a_i\)</span>是超递增的话，这个问题就很容易解决。</p>
 <p><strong>超递增整数集</strong>：<span class="math inline">\(\{a_1,a_2,...,a_n\}，a_i&gt;\sum^{i-1}_{k=1}a_k\)</span><br>
 也就是每个数都大于它前面所有数之和。</p>
-<p>对于超递增整数集，如果加密后的结果大于 <span class="math inline">\(a_i\)</span> ，则 <span class="math inline">\(a_i\)</span>的系数必须为1。这样从大至小一步一步得到它的解。</p>
+<p><mark>对于超递增整数集，如果加密后的结果大于 <span class="math inline">\(a_i\)</span> ，则 <span class="math inline">\(a_i\)</span>的系数必须为1。这样从大至小一步一步得到它的解。</mark></p>
 <h4 id="背包加密-1">背包加密</h4>
 <p>公钥：(<span class="math inline">\(GK,n\)</span>)。 GK：一般背包。<br>
 私钥：(<span class="math inline">\(SIK,m\)</span>)。<strong>SIK</strong>(Super Increasing Knapsack)：超递增背包序列（也即超递增整数集）。</p>
@@ -451,18 +393,43 @@ GK： (15,3,20,31) (15,3,20,31)<br>
 2、求 <span class="math inline">\(S=m^{-1}C\ (mod\ n)\)</span><br>
 3、用SIK对<span class="math inline">\(S\)</span>解密，还原为二进制数。</p>
 <h2 id="diffie-hellman-密钥交换">Diffie-Hellman 密钥交换</h2>
-<p>已知两个公开的数：素数 <span class="math inline">\(p\)</span> 和p的<strong>本原根</strong><span class="math inline">\(P\)</span>。<br>
+<p>已知两个公开的数：素数 <span class="math inline">\(p\)</span> 和p的<strong>本原根</strong><span class="math inline">\(g\)</span>。<br>
 用户A、B希望交换密钥：</p>
-<p>A选择随机整数 <span class="math inline">\(a&lt;p\)</span>，并计算 <span class="math inline">\(P^a\ mod\ p\)</span><br>
-B选择随机整数 <span class="math inline">\(b&lt;p\)</span>，并计算 <span class="math inline">\(P^b\ mod\ p\)</span><br>
-双方将<span class="math inline">\(a,b\)</span><strong>保密</strong>，向对方公开<span class="math inline">\(P^a,P^b\)</span>。</p>
+<p>A选择随机整数 <span class="math inline">\(a&lt;p\)</span>，并计算 <span class="math inline">\(g^a\ mod\ p\)</span><br>
+B选择随机整数 <span class="math inline">\(b&lt;p\)</span>，并计算 <span class="math inline">\(g^b\ mod\ p\)</span><br>
+双方将<span class="math inline">\(a,b\)</span><strong>保密</strong>，向对方公开<span class="math inline">\(g^a,g^b\)</span>。</p>
 <p>用户A、B计算密钥K，产生相同的结果：<br>
-A：<span class="math inline">\(K=(P^b)^a\ mod\ p\)</span><br>
-B：<span class="math inline">\(K=(P^a)^b\ mod\ p\)</span><br>
-<span class="math inline">\(K=P^{ab}\ mod\ p\)</span></p>
+A：<span class="math inline">\(K=(g^b)^a\ mod\ p\)</span><br>
+B：<span class="math inline">\(K=(g^a)^b\ mod\ p\)</span><br>
+<span class="math inline">\(K=g^{ab}\ mod\ p\)</span></p>
 <p>这样，双方就完成了密钥交换。</p>
 <h2 id="分组密码">分组密码</h2>
 <h3 id="des">DES</h3>
+<h4 id="加密过程">加密过程</h4>
+<p>1、64位明文<strong>m</strong>的通过初始变换(#1)得到 <span class="math inline">\(m_0=IP(m)\)</span>，记为 <span class="math inline">\(m_0=L_0R_0\)</span> 。<br>
+这里<span class="math inline">\(L_0\)</span>是<span class="math inline">\(m_0\)</span>的前32位，<span class="math inline">\(R_0\)</span>是后32位。</p>
+<p>2、对1&lt;= i &lt;=16，执行如下操作：（Feistel网络）<br>
+<mark><span class="math inline">\(L_i=R_{i-1}\)</span></mark><br>
+<mark><span class="math inline">\(R_i=L_{i-1}⊕f(R_{i-1},K_i)\)</span></mark></p>
+<p>3、最后左右交换得到<span class="math inline">\(R_{16}L_{16}\)</span>，然后执行初始变换的逆变换，得到密文 <span class="math inline">\(c=IP^{-1}(R_{16}L_{16})\)</span></p>
+<h4 id="函数frk">函数<span class="math inline">\(f(R,K)\)</span></h4>
+<p>1、用扩展置换表(#2)将32位<strong>R</strong>扩展为48位<strong>E(R)</strong>。</p>
+<p>2、计算<strong>E(R)⊕K</strong>，将48位结果记为<span class="math inline">\(B_1B_2...B_8\)</span>，每一个B有6位。</p>
+<p>3、共有8个S-盒，8个<span class="math inline">\(B_j\)</span> 作为 <span class="math inline">\(S_j\)</span>的输入，<span class="math inline">\(B_j\)</span>记为<span class="math inline">\(b_1b_2...b_6\)</span>，得到的输出记为<span class="math inline">\(C_1C_2...C_8\)</span>。<br>
+<span class="math inline">\(b_1b_6\)</span> 确定S盒的行（从0开始）<br>
+<span class="math inline">\(b_2b_3b_4b_5\)</span> 确定S盒的列<br>
+S-盒的元素为16进制的值，因此<span class="math inline">\(C_i\)</span>为4位。</p>
+<p>4、将32位字串<span class="math inline">\(C_1C_2...C_8\)</span>按表(#3)进行置换，得到32位的结果。</p>
+<h4 id="生成k_i">生成<span class="math inline">\(K_i\)</span></h4>
+<blockquote>
+<p>16个<span class="math inline">\(K_i\)</span>是连续生成的。</p>
+</blockquote>
+<p>1、首先密钥<strong>K</strong>为64位，按密钥置换表(#4)进行置换（此置换去掉了8个奇偶位），得到的56位结果记为<span class="math inline">\(C_0D_0\)</span>，它们各有28位。</p>
+<p>2、对 1&lt;=i&lt;=16，令 <span class="math inline">\(C_i=LS_i(C_{i-1})\)</span>，<span class="math inline">\(D_i=LS_i(D_{i-1})\)</span>。<br>
+<span class="math inline">\(LS_i()\)</span>表示循环左移。对于 i={1,2,9,16}，左移一位；其余左移两位。</p>
+<p>3、从56位字串<span class="math inline">\(C_iD_i\)</span>中按表(#5)选取48位，输出<span class="math inline">\(K_i\)</span>。</p>
+<h4 id="各置换表">各置换表</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#1 m初始置换表（初始变换） -&gt; IP(m)</span></span><br><span class="line">[<span class="number">58</span>,<span class="number">50</span>,<span class="number">42</span>,<span class="number">34</span>,<span class="number">26</span>,<span class="number">18</span>,<span class="number">10</span>,<span class="number">2</span>,<span class="number">60</span>,<span class="number">52</span>,<span class="number">44</span>,<span class="number">36</span>,<span class="number">28</span>,<span class="number">20</span>,<span class="number">12</span>,<span class="number">4</span>,</span><br><span class="line"><span class="number">62</span>,<span class="number">54</span>,<span class="number">46</span>,<span class="number">38</span>,<span class="number">30</span>,<span class="number">22</span>,<span class="number">14</span>,<span class="number">6</span>,<span class="number">64</span>,<span class="number">56</span>,<span class="number">48</span>,<span class="number">40</span>,<span class="number">32</span>,<span class="number">24</span>,<span class="number">16</span>,<span class="number">8</span>,</span><br><span class="line"><span class="number">57</span>,<span class="number">49</span>,<span class="number">41</span>,<span class="number">33</span>,<span class="number">25</span>,<span class="number">17</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">59</span>,<span class="number">51</span>,<span class="number">43</span>,<span class="number">35</span>,<span class="number">27</span>,<span class="number">19</span>,<span class="number">11</span>,<span class="number">3</span>,</span><br><span class="line"><span class="number">61</span>,<span class="number">53</span>,<span class="number">45</span>,<span class="number">37</span>,<span class="number">29</span>,<span class="number">21</span>,<span class="number">13</span>,<span class="number">5</span>,<span class="number">63</span>,<span class="number">55</span>,<span class="number">47</span>,<span class="number">39</span>,<span class="number">31</span>,<span class="number">23</span>,<span class="number">15</span>,<span class="number">7</span>]</span><br><span class="line"><span class="comment">#2 R扩展置换表 -&gt; E(R)</span></span><br><span class="line">[<span class="number">32</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,</span><br><span class="line"><span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>,<span class="number">17</span>, </span><br><span class="line"><span class="number">16</span>,<span class="number">17</span>,<span class="number">18</span>,<span class="number">19</span>,<span class="number">20</span>,<span class="number">21</span>,<span class="number">20</span>,<span class="number">21</span>,<span class="number">22</span>,<span class="number">23</span>,<span class="number">24</span>,<span class="number">25</span>,</span><br><span class="line"><span class="number">24</span>,<span class="number">24</span>,<span class="number">25</span>,<span class="number">26</span>,<span class="number">27</span>,<span class="number">28</span>,<span class="number">29</span>,<span class="number">28</span>,<span class="number">29</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">32</span>,<span class="number">1</span>]</span><br><span class="line"><span class="comment">#3 C1C2...C8置换表</span></span><br><span class="line">[<span class="number">16</span>,<span class="number">7</span>,<span class="number">20</span>,<span class="number">21</span>,<span class="number">29</span>,<span class="number">12</span>,<span class="number">28</span>,<span class="number">17</span>,<span class="number">1</span>,<span class="number">15</span>,<span class="number">23</span>,<span class="number">26</span>,<span class="number">5</span>,<span class="number">18</span>,<span class="number">31</span>,<span class="number">10</span>,</span><br><span class="line"><span class="number">2</span>,<span class="number">8</span>,<span class="number">24</span>,<span class="number">14</span>,<span class="number">32</span>,<span class="number">27</span>,<span class="number">3</span>,<span class="number">9</span>,<span class="number">19</span>,<span class="number">13</span>,<span class="number">30</span>,<span class="number">6</span>,<span class="number">22</span>,<span class="number">11</span>,<span class="number">4</span>,<span class="number">25</span>]</span><br><span class="line"><span class="comment">#4 K密钥置换表 -&gt; C0D0</span></span><br><span class="line">[<span class="number">57</span>,<span class="number">49</span>,<span class="number">41</span>,<span class="number">33</span>,<span class="number">25</span>,<span class="number">17</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">58</span>,<span class="number">50</span>,<span class="number">42</span>,<span class="number">34</span>,<span class="number">26</span>,<span class="number">18</span>,</span><br><span class="line"><span class="number">10</span>,<span class="number">2</span>,<span class="number">59</span>,<span class="number">51</span>,<span class="number">43</span>,<span class="number">35</span>,<span class="number">27</span>,<span class="number">19</span>,<span class="number">11</span>,<span class="number">3</span>,<span class="number">60</span>,<span class="number">52</span>,<span class="number">44</span>,<span class="number">36</span>,</span><br><span class="line"><span class="number">63</span>,<span class="number">55</span>,<span class="number">47</span>,<span class="number">39</span>,<span class="number">31</span>,<span class="number">23</span>,<span class="number">15</span>,<span class="number">7</span>,<span class="number">62</span>,<span class="number">54</span>,<span class="number">46</span>,<span class="number">38</span>,<span class="number">30</span>,<span class="number">22</span>,</span><br><span class="line"><span class="number">14</span>,<span class="number">6</span>,<span class="number">61</span>,<span class="number">53</span>,<span class="number">45</span>,<span class="number">37</span>,<span class="number">29</span>,<span class="number">21</span>,<span class="number">13</span>,<span class="number">5</span>,<span class="number">28</span>,<span class="number">20</span>,<span class="number">12</span>,<span class="number">4</span>]</span><br><span class="line"><span class="comment">#5 CiDi置换表 -&gt; Ki</span></span><br><span class="line">[<span class="number">14</span>,<span class="number">17</span>,<span class="number">11</span>,<span class="number">24</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">6</span>,<span class="number">21</span>,<span class="number">10</span>,</span><br><span class="line"><span class="number">23</span>,<span class="number">19</span>,<span class="number">12</span>,<span class="number">4</span>,<span class="number">26</span>,<span class="number">8</span>,<span class="number">16</span>,<span class="number">7</span>,<span class="number">27</span>,<span class="number">20</span>,<span class="number">13</span>,<span class="number">2</span>,</span><br><span class="line"><span class="number">41</span>,<span class="number">52</span>,<span class="number">31</span>,<span class="number">37</span>,<span class="number">47</span>,<span class="number">55</span>,<span class="number">30</span>,<span class="number">40</span>,<span class="number">51</span>,<span class="number">45</span>,<span class="number">33</span>,<span class="number">48</span>,</span><br><span class="line"><span class="number">44</span>,<span class="number">49</span>,<span class="number">39</span>,<span class="number">56</span>,<span class="number">34</span>,<span class="number">53</span>,<span class="number">46</span>,<span class="number">42</span>,<span class="number">50</span>,<span class="number">36</span>,<span class="number">29</span>,<span class="number">32</span>]</span><br></pre></td></tr></table></figure>
 <h3 id="aes">AES</h3>
 <h2 id="流密码">流密码</h2>
 <p><strong>一次一密</strong>算法：<br>
@@ -473,7 +440,7 @@ B：<span class="math inline">\(K=(P^a)^b\ mod\ p\)</span><br>
 <p>在生成密码流的过程中将当前生成的密钥与明文的下一位做异或运算得到对应的密文位。<br>
 解密过程与加密相同。</p>
 <h3 id="a51">A5/1</h3>
-<p>​ 有以下三个初始移位寄存器X、Y、Z，分别有19位，22位，23位。<br>
+<p>​ 有以下三个初始移位寄存器X、Y、Z，分别有<strong>19位，22位，23位</strong>。<br>
 <span class="math display">\[
 X\quad
 \begin{array}{|c|c|c|}
@@ -489,14 +456,14 @@ Z\quad
 \hline\end{array}
 \]</span></p>
 <p>​ 假设有三个寄存器目前的状态是这样：</p>
-<p><img src="/2021/12/16/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6/A51%E5%AF%84%E5%AD%98%E5%99%A8.png" alt="三个寄存器"></p>
-<p>1、首先找到 <span class="math inline">\(x_8，y_10，z_10\)</span>。<br>
-2、取数量最多的值作为结果M。M=Maj(<span class="math inline">\(x_8,y_10,z_10\)</span>)= Maj(1,0,1)=1。（如果是Maj(0,0,1)=0）<br>
-3、对 <span class="math inline">\(x_8，y_10，z_10\)</span>中等于M的那个寄存器“左移”一位（注意图上都是反着放的），并在空出的最低位填入一位。规则如下：（不等于M则保持不变）<br>
-如果 <span class="math inline">\(x_8\)</span>=M，新的<span class="math inline">\(x_0=x_{13}⊕x_{16}⊕x_{17}⊕x_{18}\)</span>，然后X寄存器左移一位；<br>
-如果 <span class="math inline">\(y_10\)</span>=M，新的<span class="math inline">\(y_0=y_{20}⊕y_{21}\)</span>，然后Y寄存器左移一位；<br>
-如果 <span class="math inline">\(z_10\)</span>=M，新的<span class="math inline">\(z_0=z_{7}⊕z_{20}⊕z_{21}⊕z_{22}\)</span>，然后Z寄存器左移一位；</p>
-<p>最后密钥 <span class="math inline">\(k_0=x_{18}⊕y_{21}⊕z_{22}\)</span>（三个最高位异或）<br>
+<p><img src="https://images2018.cnblogs.com/blog/1343872/201805/1343872-20180522212824710-864161932.png" alt="img"></p>
+<p>1、首先找到<mark><span class="math inline">\(x_8，y_{10}，z_{10}\)</span></mark>。<br>
+2、取数量最多的值作为结果M。M=Maj(<span class="math inline">\(x_8,y_{10},z_{10}\)</span>)= Maj(1,0,1)=1。（Maj(0,0,1)=0）<br>
+3、对 <span class="math inline">\(x_8，y_{10}，z_{10}\)</span>中等于M的那个寄存器“左移”一位（注意图上都是反着放的），并在空出的最低位填入一位。规则如下：（不等于M则保持不变）<br>
+如果 <span class="math inline">\(x_8\)</span>=M，新的<mark><span class="math inline">\(x_0=x_{13}⊕x_{16}⊕x_{17}⊕x_{18}\)</span></mark>，然后X寄存器左移一位；<br>
+如果 <span class="math inline">\(y_{10}\)</span>=M，新的<mark><span class="math inline">\(y_0=y_{20}⊕y_{21}\)</span></mark>，然后Y寄存器左移一位；<br>
+如果 <span class="math inline">\(z_{10}\)</span>=M，新的<mark><span class="math inline">\(z_0=z_{7}⊕z_{20}⊕z_{21}⊕z_{22}\)</span></mark>，然后Z寄存器左移一位；</p>
+<p>最后密钥 <span class="math inline">\(k_0=x_{18}⊕y_{21}⊕z_{22}\)</span>（三个<strong>最高位</strong>异或）<br>
 如果需要64位密钥，对上述过程循环64次。</p>
 <h3 id="rc4">RC4</h3>
 <p>256字节的状态向量S= {0，1，…，255}，用比特字节表示为S= {00000000, 00000001, ….，11111111}。用一个可变长度为1~256字节（8-8048位）的密钥来初始化256字节的状态向量S={S[0], S[1], …, S[255]}，任何时候，S都包含0-255的8位无符号数的排列组合。加密和解密时，密码流中的每一个字节k由S产生，通过系统的方式随机从S的256个元素中选取一个。每产生一个字节k，S的元素都要被再次排列。</p>
@@ -509,8 +476,8 @@ S中元素的值按升序被置为0-255，同时建立一个临时向量T[256]�
 用T产生S的初始置换，置换伪码如下：<br>
 　　j = 0;<br>
 　　for (i = 0 ; i &lt; 256 ; i++){<br>
-　　　　j = ( j + S[i] + T[i] ) mod 256;<br>
-　　　　swap(S[i] , S[j]);<br>
+　　　　<strong>j = ( j + S[i] + T[i] ) mod 256;</strong><br>
+　　　　<strong>swap(S[i] , S[j]);</strong> // 交换<br>
 　　}<br>
 因为对S的操作仅是交换，S仍然包含所有值为0-255的元素。</p>
 <p>3、<strong>密钥流的生成</strong><br>
@@ -518,47 +485,139 @@ S中元素的值按升序被置为0-255，同时建立一个临时向量T[256]�
 　　i , j = 0;<br>
 　　while (true){<br>
 　　　　i = (i + 1) mod 256;<br>
-　　　　j = (j + S[i]) mod 256;<br>
-　　　　swap(S[i] , S[j]); //每产生一个k都重新排列S<br>
-　　　　t = (S[i] + S[j]) mod 256;<br>
-　　　　k = S[t]; //获取S中的一个随机元素作为密码流字节<br>
+　　　　<strong>j = (j + S[i]) mod 256;</strong><br>
+　　　　<strong>swap(S[i] , S[j]);</strong> //每产生一个k都重新排列S<br>
+　　　　<strong>t = (S[i] + S[j]) mod 256;</strong><br>
+　　　　<strong>k = S[t];</strong> //获取S中的一个随机元素作为密码流字节<br>
 output(k);<br>
 　　}</p>
-<h2 id="椭圆曲线密码">椭圆曲线密码</h2>
+<h2 id="椭圆曲线密码ecc">椭圆曲线密码ECC</h2>
+<p>Elliptic Curve Cryptography<br>
+<a href="https://www.cnblogs.com/Kalafinaian/p/7392505.html">ECC椭圆曲线详解(有具体实例) - Kalafinaian - 博客园 (cnblogs.com)</a></p>
 <h3 id="椭圆曲线">椭圆曲线</h3>
 <p>椭圆曲线并非椭圆，它的曲线方程通常是以下形式的三次方程：<br>
 <span class="math display">\[
 y^2+axy+by=x^3+cx^2+dx+e
 \]</span></p>
 <h3 id="有限域上的椭圆曲线">有限域上的椭圆曲线</h3>
-<p>讨论曲线 <span class="math inline">\(y^2=x^3+ax+b\ (mod\ p)\)</span>，a,b为小于p的整数<br>
-当<span class="math inline">\(4a^3+27b^2(mod\ p)\)</span>不为零时构成有限域<span class="math inline">\(F_p\)</span>上的椭圆曲线群，记为<span class="math inline">\(E_p(a,b)\)</span>。</p>
+<p>讨论曲线 <mark><span class="math inline">\(y^2=x^3+ax+b\ (mod\ p)\)</span></mark>，a,b为小于p的整数</p>
+<p>当 <span class="math inline">\(4a^3+27b^2(mod\ p)\)</span>不为零时构成有限域<span class="math inline">\(F_p\)</span>上的椭圆曲线群，记为 <mark><span class="math inline">\(E_p(a,b)\)</span></mark>。</p>
 <h4 id="点的构造">点的构造</h4>
-<p>1、对于每一个x (0&lt;=x&lt;p)，计算<span class="math inline">\(z=x^3+ ax+b(mod\ p)\)</span></p>
-<p>2、若z不是模p的平方根，则在x上不存在<span class="math inline">\(E_p(a,b)\)</span>点；<br>
-若z是模p的平方根，则存在满足条件的两个点。</p>
+<p>1、对于每一个x (0&lt;=x&lt;p)，计算 <span class="math inline">\(z=x^3+ ax+b(mod\ p)\)</span></p>
+<p>2、若z不是模p的平方剩余，则在x上不存在<span class="math inline">\(E_p(a,b)\)</span>点；<br>
+若z是模p的平方剩余，则存在满足条件的两个点。<span class="math inline">\(z=y^2\)</span></p>
 <h4 id="点的加法">点的加法</h4>
 <p>定义：若P和Q都是椭圆曲线上的点，则P+Q也是曲线上的点。</p>
 <p><strong>单位元</strong>：无穷远∞点<span class="math inline">\(O\)</span>。对于所有曲线上的点P，P+∞=P.</p>
-<p><strong>逆元</strong>：记为-P，P+(-P)=<span class="math inline">\(O\)</span>。<br>
+<p><strong>逆元</strong>：记为<span class="math inline">\(-P\)</span>，P+(-P)=<span class="math inline">\(O\)</span>。<br>
 对于<span class="math inline">\(y^2=x^3+ax+b\)</span>，若P=(x,y)，则<strong>-P=(x,-y)</strong>。</p>
-<p>将通过(x,y)和(x,-y)的直线看作<strong>垂线</strong>，它在单位元<span class="math inline">\(O\)</span>处与曲线第三次相交。即(x,y)+(x,-y)=<span class="math inline">\(O\)</span>。</p>
+<p><strong>垂线</strong>：通过(x,y)和(x,-y)的直线，它在单位元<span class="math inline">\(O\)</span>处与曲线第三次相交。即(x,y)+(x,-y)=<span class="math inline">\(O\)</span>。</p>
 <p>点的加法定义：若P、Q、R是曲线中位于同一条直线上的3个点，则<br>
 <span class="math inline">\(P+Q+R=O\)</span><br>
 这意味着<span class="math inline">\(P+Q=-R\)</span></p>
+<h4 id="阶-1">阶</h4>
+<p>椭圆曲线的阶：椭圆曲线上点的个数。</p>
+<p>椭圆曲线上点的阶：<br>
+如果椭圆曲线上一点P，存在最小的正整数n使得数乘 <span class="math inline">\(nP=∞\)</span>，则将n称为P的阶。若n不存在，则P是无限阶的。</p>
 <h4 id="求点pq">求点P+Q</h4>
 <p>已知 <span class="math inline">\(P=(x_p,y_p)，Q=(x_Q,y_Q)\)</span>，且<span class="math inline">\(P≠Q，Q≠-P\)</span></p>
 <p><span class="math inline">\(R=P+Q\)</span>：<br>
 <span class="math inline">\(λ=(y_p-y_Q)/(x_p-x_Q)\ (mod\ p)\)</span><br>
-<span class="math inline">\(x_R=λ^2-x_p-x_Q\ (mod\ p)\)</span><br>
-<span class="math inline">\(y_R=-y_p+λ(x_p-x_R)\ (mod\ p)\)</span></p>
+<mark><span class="math inline">\(x_R=λ^2-x_p-x_Q\ (mod\ p)\)</span></mark><br>
+<span class="math inline">\(y_R=-[y_p+λ(x_R-x_p)]\ (mod\ p)\)</span></p>
 <h4 id="求点2p">求点2P</h4>
 <p>已知 <span class="math inline">\(P=(x_p,y_p)\)</span>，且<span class="math inline">\(y_p≠0\)</span></p>
 <p><span class="math inline">\(R=2P\)</span>：<br>
-<span class="math inline">\(λ=(3x^2_p+a)/(2y_p)\ (mod\ p)\)</span><br>
+<mark><span class="math inline">\(λ=(3x^2_p+a)/(2y_p)\ (mod\ p)\)</span></mark><br>
 <span class="math inline">\(x_R=λ^2-2x_p\ (mod\ p)\)</span><br>
-<span class="math inline">\(y_R=-y_p+λ(x_p-x_R)\ (mod\ p)\)</span></p>
+<span class="math inline">\(y_R=-[y_p+λ(x_R-x_p)]\ (mod\ p)\)</span></p>
+<p>由上面两种计算方法可以得到任意倍数的P。（如5P = 4P+P = 2*(2P)+P）</p>
+<h3 id="椭圆曲线离散对数问题">椭圆曲线离散对数问题</h3>
+<p>Elliptic Curve Discrete Logarithm Problem (ECDLP)</p>
+<p>P和Q是椭圆曲线上的两个点，k为小于P的阶n的整数。满足 <span class="math inline">\(Q=kP\)</span><br>
+点P称为基点；k为私有密钥，Q为公开密钥。</p>
+<p>给定k和P，容易计算Q；<br>
+但给定P和Q，求k非常困难。</p>
+<h3 id="ecc实现">ECC实现</h3>
+<p>[椭圆曲线在Fp域上的加密（python实现）_进击的小小白-CSDN博客_椭圆曲线加密python](https://blog.csdn.net/qq_38130747/article/details/85053660)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">ECC在Fp域上的加解密</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_inverse_element</span>(<span class="params">value, max_value</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    计算value在1~max_value之间的逆元（枚举）</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, max_value):</span><br><span class="line">        <span class="keyword">if</span> (i * value) % max_value == <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gcd_x_y</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    计算最大公约数</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> y == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> gcd_x_y(y, x % y)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_p_q</span>(<span class="params">x1,y1,x2,y2, a, p</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    计算p+q</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    flag = <span class="number">1</span>  <span class="comment"># 定义符号位</span></span><br><span class="line">    <span class="keyword">if</span> x1 == x2 <span class="keyword">and</span> y1 == y2:</span><br><span class="line">        member = <span class="number">3</span> * (x1 ** <span class="number">2</span>) + a  <span class="comment"># 计算分子</span></span><br><span class="line">        denominator = <span class="number">2</span> * y1    <span class="comment"># 计算分母</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        member = y2 - y1</span><br><span class="line">        denominator = x2 - x1 </span><br><span class="line">        <span class="keyword">if</span> member* denominator &lt; <span class="number">0</span>:</span><br><span class="line">            flag = <span class="number">0</span></span><br><span class="line">            member = <span class="built_in">abs</span>(member)</span><br><span class="line">            denominator = <span class="built_in">abs</span>(denominator)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 将分子和分母化为最简</span></span><br><span class="line">    gcd_value = gcd_x_y(member, denominator)</span><br><span class="line">    member = <span class="built_in">int</span>(member / gcd_value)</span><br><span class="line">    denominator = <span class="built_in">int</span>(denominator / gcd_value)</span><br><span class="line">    <span class="comment"># 求分母的逆元    </span></span><br><span class="line">    inverse_value = get_inverse_element(denominator, p)</span><br><span class="line">    k = (member * inverse_value)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        k = -k</span><br><span class="line">    k = k % p</span><br><span class="line">    <span class="comment"># 计算x3,y3</span></span><br><span class="line">    x3 = (k ** <span class="number">2</span> - x1 - x2) % p</span><br><span class="line">    y3 = (k * (x1 - x3) - y1) % p</span><br><span class="line">    <span class="comment"># print(&quot;%d&lt;=====&gt;%d&quot; % (x3, y3))</span></span><br><span class="line">    <span class="keyword">return</span> [x3,y3]</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_order</span>(<span class="params">x0, y0, a, b, p</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    计算点(x0,y0)的阶</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 计算-p</span></span><br><span class="line">    x1 = x0</span><br><span class="line">    y1 = (-<span class="number">1</span> * y0) % p</span><br><span class="line">    temp_x = x0</span><br><span class="line">    temp_y = y0</span><br><span class="line">    n = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        n += <span class="number">1</span></span><br><span class="line">        p_value = calculate_p_q(temp_x,temp_y, x0, y0, a, p)</span><br><span class="line">        <span class="keyword">if</span> p_value[<span class="number">0</span>] == x1 <span class="keyword">and</span> p_value[<span class="number">1</span>] == y1:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;==========该椭圆曲线的阶为%d=========&quot;</span> % (n+<span class="number">1</span>))</span><br><span class="line">            <span class="keyword">return</span> n+<span class="number">1</span></span><br><span class="line">            </span><br><span class="line">        temp_x = p_value[<span class="number">0</span>]</span><br><span class="line">        temp_y = p_value[<span class="number">1</span>]</span><br><span class="line">    <span class="comment"># print(&quot;%d-%d-%d-%d&quot; % (x0,y0,x1,y1))</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_x0_y0_x1_y1</span>(<span class="params">x0, a, b, p</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    计算p和-p</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    y0 = -<span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,p):</span><br><span class="line">        <span class="keyword">if</span> i ** <span class="number">2</span> % p == (x0**<span class="number">3</span> + a*x0 + b) % p:</span><br><span class="line">            y0 = i</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 如果y0找不到则返回False</span></span><br><span class="line">    <span class="keyword">if</span> y0 == -<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="comment"># 计算-y</span></span><br><span class="line">    x1 = x0</span><br><span class="line">    y1 = -<span class="number">1</span> * y0 % p</span><br><span class="line">    <span class="comment"># print(&quot;%d-%d-%d-%d&quot; % (x0,y0,x1,y1))</span></span><br><span class="line">    <span class="keyword">return</span> [x0,y0,x1,y1]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">draw_graph</span>(<span class="params">a,b,p</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    输出散列图</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    x_y = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(p):</span><br><span class="line">        x_y.append([<span class="string">&quot;-&quot;</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(p)])</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(p):</span><br><span class="line">        value = get_x0_y0_x1_y1(i, a, b, p)</span><br><span class="line">        <span class="keyword">if</span> value != <span class="literal">False</span>:</span><br><span class="line">            x0 = value[<span class="number">0</span>]</span><br><span class="line">            y0 = value[<span class="number">1</span>]</span><br><span class="line">            x1 = value[<span class="number">2</span>]</span><br><span class="line">            y1 = value[<span class="number">3</span>]</span><br><span class="line">            <span class="comment"># print(&quot;%d-%d-%d-%d&quot; % (x0,y0,x1,y1))</span></span><br><span class="line">            x_y[x0][y0] = <span class="number">1</span></span><br><span class="line">            x_y[x1][y1] = <span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;椭圆曲线的散列图为:&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(p):</span><br><span class="line">        <span class="keyword">if</span> p-<span class="number">1</span>-j &gt;= <span class="number">10</span>:</span><br><span class="line">            <span class="built_in">print</span>(p-<span class="number">1</span>-j, end=<span class="string">&quot; &quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">             <span class="built_in">print</span>(p-<span class="number">1</span>-j, end=<span class="string">&quot;  &quot;</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(p):</span><br><span class="line">            <span class="built_in">print</span>(x_y[i][p-j-<span class="number">1</span>], end=<span class="string">&quot;  &quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;   &quot;</span>,end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(p):</span><br><span class="line">        <span class="keyword">if</span> i &gt;= <span class="number">10</span>:</span><br><span class="line">            <span class="built_in">print</span>(i, end=<span class="string">&quot; &quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(i, end=<span class="string">&quot;  &quot;</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_np</span>(<span class="params">G_x, G_y, private_key, a, p</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    计算nG</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    temp_x = G_x</span><br><span class="line">    temp_y = G_y</span><br><span class="line">    <span class="keyword">while</span> private_key != <span class="number">1</span>:</span><br><span class="line">        p_value = calculate_p_q(temp_x,temp_y, G_x, G_y, a, p)</span><br><span class="line">        temp_x = p_value[<span class="number">0</span>]</span><br><span class="line">        temp_y = p_value[<span class="number">1</span>]</span><br><span class="line">        private_key -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> p_value</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ecc_encrypt_and_decrypt</span>():</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入椭圆曲线的参数a:&quot;</span>))</span><br><span class="line">        b = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入椭圆曲线的参数b:&quot;</span>))</span><br><span class="line">        p = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入椭圆曲线的参数p(p为质数):&quot;</span>))</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (<span class="number">4</span>*(a**<span class="number">3</span>) + <span class="number">27</span>*(b**<span class="number">2</span>)) % p ==<span class="number">0</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;选取的椭圆曲线不能用于加密，请重新选择\n&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># 输出该椭圆曲线的散点图</span></span><br><span class="line">    draw_graph(a,b,p)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;在上图中选出一个点作为生成元G&quot;</span>)</span><br><span class="line">    G_x = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;你选取的横坐标G_x:&quot;</span>))</span><br><span class="line">    G_y = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;你选取的纵坐标G_y:&quot;</span>))</span><br><span class="line">    <span class="comment"># 获取该椭圆曲线的阶</span></span><br><span class="line">    n = get_order(G_x, G_y, a, b, p)</span><br><span class="line">    <span class="comment"># 获取私钥并且key &lt; 椭圆曲线的阶n</span></span><br><span class="line">    private_key = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;输入私钥key(&lt;%d):&quot;</span> % n))</span><br><span class="line">    <span class="comment"># 计算公钥 nG</span></span><br><span class="line">    Q = calculate_np(G_x,G_y,private_key,a,p)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;==================生成公钥&#123;a=%d,b=%d,p=%d,阶%d,G(%d,%d),Q(%d,%d)&#125;======&quot;</span> % (a, b, p, n, G_x, G_y , Q[<span class="number">0</span>], Q[<span class="number">1</span>]))</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 加密开始</span></span><br><span class="line">    k = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请给出整数(&lt;%d):&quot;</span> % n))</span><br><span class="line">    k_G = calculate_np(G_x,G_y,k,a,p) <span class="comment"># 计算kG</span></span><br><span class="line">    k_Q = calculate_np(Q[<span class="number">0</span>],Q[<span class="number">1</span>],k,a,p) <span class="comment"># 计算kQ</span></span><br><span class="line">    plain_text = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入要加密的明文：&quot;</span>))</span><br><span class="line">    cipher_text = plain_text * k_Q[<span class="number">0</span>]  <span class="comment"># 计算明文与kQ横坐标的乘积</span></span><br><span class="line">    <span class="comment"># 密文为</span></span><br><span class="line">    C = [k_G[<span class="number">0</span>], k_G[<span class="number">1</span>],cipher_text] </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;密文为：&#123;(%d,%d),%d&#125;&quot;</span> % (C[<span class="number">0</span>], C[<span class="number">1</span>], C[<span class="number">2</span>]))</span><br><span class="line">    <span class="comment"># 解密</span></span><br><span class="line">    <span class="comment"># 计算private_key*kG</span></span><br><span class="line">    decrypto_text = calculate_np(C[<span class="number">0</span>],C[<span class="number">1</span>],private_key,a,p) </span><br><span class="line">    </span><br><span class="line">    inverse_value = get_inverse_element(decrypto_text[<span class="number">0</span>], p)</span><br><span class="line">    m = C[<span class="number">2</span>] * inverse_value % p</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;解密后的明文为%d&quot;</span> % m)</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    ecc_encrypt_and_decrypt()</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
 <h2 id="格密码">格密码</h2>
+<p><a href="https://zhuanlan.zhihu.com/p/222217422">格密码（lattice-based cryptography）数学入门（一）：密码学和格 - 知乎 (zhihu.com)</a></p>
+<p><a href="https://www.gps949.com/2020/09/07/格密码学笔记/">格密码学笔记 | 小北极星笔记 (gps949.com)</a></p>
+<p>[格密码学习笔记（一）_中科院大学网安学院五班的博客-CSDN博客_格密码](https://blog.csdn.net/weixin_43255133/article/details/83031862)</p>
+<p><a href="https://blog.msfakatsuki.com/Crypto/LLL-Lattice-deduction/">格简介与LLL格基约化 | Makari's Blog (msfakatsuki.com)</a></p>
+<h1 id="行列式与矩阵">行列式与矩阵</h1>
+<h2 id="行列式的值">行列式的值</h2>
+<h3 id="二阶行列式">二阶行列式</h3>
+<p>：主对角线之积减去副对角线之积<br>
+<span class="math display">\[
+D=
+\left|\begin{matrix}
+a_{11}&amp;a_{12}\\
+a_{21}&amp;a_{22}
+\end{matrix}\right|
+=a_{11}a_{22}-a_{12}a_{21}
+\]</span></p>
+<h3 id="三阶行列式">三阶行列式</h3>
+<p><span class="math display">\[
+\left|\begin{matrix}
+x&amp;y&amp;z\\
+r&amp;s&amp;t\\
+a&amp;b&amp;c
+\end{matrix}\right|
+=xsc+yta+zrb-(zsa+yrc+xtb)
+\]</span></p>
+<p>这个依然叫“对角线法则”，不过是复杂版的：主对角线乘完以后元素位置要平移一下继续相乘，直到x、y、z分别开过头以后，再分别减去x、y、z开头的副对角线乘积。</p>
+<h3 id="n阶行列式">n阶行列式</h3>
+<p>逆序数：一个排列中逆序对的总数，大数在小数前面就是一个逆序。<br>
+计算方法：从前往后看，每看一个数就看前面有比它大的有几个，然后加起来。<br>
+<span class="math inline">\(t(32514)=5\)</span></p>
+<p>n阶行列式的值<br>
+<span class="math display">\[
+\left|\begin{matrix}
+a_{11}&amp;a_{12}&amp;...&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;...&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;...&amp;a_{nn}\\
+\end{matrix}\right|
+=\sum\ (-1)^{t(p_1p_2...p_n)}a_{1p_1}a_{2p_2}\cdots a_{np_n}
+\]</span></p>
+<ol type="1">
+<li>n阶行列式一共有<strong>n!</strong>项（因为是a的第二个下标的全排列）。</li>
+<li>每一项都是不同行不同列的n个元素的积。</li>
+<li>当第二下标的排列是奇排列符号为负，否则为正。</li>
+</ol>
+<h2 id="代数余子式">代数余子式</h2>
+<p>余子式：将行列式的元素<span class="math inline">\(a_{ij}\)</span>所在的行、列删去得到(n-1)阶的行列式：<span class="math inline">\(M_{ij}\)</span></p>
+<p>代数余子式：<mark><span class="math inline">\(A_{ij}=(-1)^{i+j}M_{ij}\)</span></mark></p>
+<p>行列式等于其任意某一行（或某列）的各元素与其对应代数余子式乘积之和。</p>
+<h2 id="矩阵的行列式">矩阵的行列式</h2>
+<p>表示为 <span class="math inline">\(det(A)\ 或\ |A|\)</span></p>
+<h2 id="伴随矩阵">伴随矩阵</h2>
+<p>伴随矩阵<span class="math inline">\(A^*\)</span>：矩阵元素所对应的<strong>代数余子式</strong>构成的矩阵<strong>转置</strong>后得到的新矩阵。（转置：行列互换）<br>
+<span class="math display">\[
+\left(\begin{matrix}
+a_{11}&amp;a_{12}&amp;a_{13}\\
+a_{21}&amp;a_{22}&amp;a_{23}\\
+a_{31}&amp;a_{32}&amp;a_{33}
+\end{matrix}\right)
+→
+\left(\begin{matrix}
+A_{11}&amp;A_{12}&amp;A_{13}\\
+A_{21}&amp;A_{22}&amp;A_{23}\\
+A_{31}&amp;A_{32}&amp;A_{33}
+\end{matrix}\right)
+→
+\left(\begin{matrix}
+A_{11}&amp;A_{21}&amp;A_{31}\\
+A_{12}&amp;A_{22}&amp;A_{32}\\
+A_{13}&amp;A_{23}&amp;A_{33}
+\end{matrix}\right)
+\]</span><br>
+性质：<span class="math inline">\(AA^*=A^*A=|A|E\)</span> （E：单位矩阵，主对角线为1，其他全为0）</p>
+<h2 id="逆矩阵">逆矩阵</h2>
+<p><span class="math inline">\(逆矩阵A^{-1}:\quad AA^{-1}=A^{-1}A=E\)</span></p>
+<p><mark><span class="math inline">\(A^{-1}=\frac{1}{|A|}A^*\)</span></mark></p>
 ]]></content>
       <categories>
         <category>课程总结</category>
